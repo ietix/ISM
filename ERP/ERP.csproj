@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A9809B4F-ECC4-46CA-A570-95BB3E87700C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ERP</RootNamespace>
+    <AssemblyName>ERP</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\Addresses.cs" />
+    <Compile Include="Model\AFIP_ConceptosIncluidos.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AFIP_Iva.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AFIP_TiposComprobante.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AFIP_TiposDocumento.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AFIP_TiposMonedas.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AFIP_UnidadesMedida.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BASE_Cities.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BASE_Countries.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BASE_Descriptions.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BASE_Languages.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BASE_PostalCodes.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BASE_Profiles.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BASE_ProfilesResources.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BASE_Provinces.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BASE_Resources.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BASE_Uom.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BASE_UserProfiles.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BASE_Users.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Cities.cs" />
+    <Compile Include="Model\Contacts.cs" />
+    <Compile Include="Model\ContactType.cs" />
+    <Compile Include="Model\Countries.cs" />
+    <Compile Include="Model\Descriptions.cs" />
+    <Compile Include="Model\Clients.cs" />
+    <Compile Include="Model\Entity.cs" />
+    <Compile Include="Model\ERPModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ERPModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ERPModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ERPModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ERPModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ERPRepository.cs" />
+    <Compile Include="Model\ERP_Addresses.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ERP_Articles.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ERP_ArticlesClient.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ERP_ArticlesSupplier.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ERP_ArticleSupplierCostHistory.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ERP_BankAccounts.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ERP_BankRelations.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ERP_Banks.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ERP_Clients.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ERP_Companies.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ERP_Contacts.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ERP_ContactTypes.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ERP_Contracts.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ERP_CreditNote.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ERP_Invoices.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ERP_ItemsContract.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ERP_ItemsCreditNote.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ERP_ItemsSalesOrder.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ERP_ItemsShippingNote.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ERP_Payments.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ERP_PaymentTypes.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ERP_PointsOfSales.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ERP_PriceArticlesHistory.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ERP_SalesConditions.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ERP_SalesOrder.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ERP_SalesOrderStates.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ERP_ShippingNote.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ERP_ShippingNotesInvoices.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ERP_ShippingNoteStates.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ERP_Suppliers.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Language.cs" />
+    <Compile Include="Model\Provinces.cs" />
+    <Compile Include="Model\RPT_Reports.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\RPT_ReportsPointOfSales.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Subject.cs" />
+    <Compile Include="Model\TipoDeDocumento.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EntityDeploy Include="Model\ERPModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ERPModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="Model\ERPModel.edmx.diagram">
+      <DependentUpon>ERPModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model\ERPModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ERPModel.edmx</DependentUpon>
+      <LastGenOutput>ERPModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\ERPModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ERPModel.edmx</DependentUpon>
+      <LastGenOutput>ERPModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
