@@ -1,0 +1,10 @@
+*.dll.config
+*.dll
+*.pdb
+[Bb]in
+[Dd]ebug*/
+obj/Debug/
+*.cache
+*.cs.dll
+ERP/obj/Debug*/
+ERP/obj/Debug/TempPE*/
