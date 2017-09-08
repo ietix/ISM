@@ -25,10 +25,10 @@ namespace ERP.Model
         public int pointOfSaleId { get; set; }
         public int invoiceNumber { get; set; }
         public System.DateTime invoiceDate { get; set; }
-        public int codigoTipoComprobante { get; set; }
-        public int codigoTipoMoneda { get; set; }
-        public int codigoConcepto { get; set; }
-        public int codigoIva { get; set; }
+        public int receiptTypeId { get; set; }
+        public int currencyTypeId { get; set; }
+        public int conceptId { get; set; }
+        public int taxId { get; set; }
         public decimal subtotal { get; set; }
         public decimal total { get; set; }
         public string cae { get; set; }
@@ -36,10 +36,6 @@ namespace ERP.Model
         public int salesConditionId { get; set; }
         public Nullable<decimal> changeRate { get; set; }
     
-        public virtual AFIP_ConceptosIncluidos AFIP_ConceptosIncluidos { get; set; }
-        public virtual AFIP_Iva AFIP_Iva { get; set; }
-        public virtual AFIP_TiposComprobante AFIP_TiposComprobante { get; set; }
-        public virtual AFIP_TiposMonedas AFIP_TiposMonedas { get; set; }
         public virtual ICollection<ERP_CreditNote> ERP_CreditNote { get; set; }
         public virtual ERP_SalesConditions ERP_SalesConditions { get; set; }
         public virtual ERP_PointsOfSales ERP_PointsOfSales { get; set; }

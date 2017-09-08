@@ -17,15 +17,12 @@ namespace ERP.Model
         public ERP_Banks()
         {
             this.ERP_BankAccounts = new HashSet<ERP_BankAccounts>();
-            this.ERP_BankRelations = new HashSet<ERP_BankRelations>();
         }
     
         public int bankId { get; set; }
         public string name { get; set; }
-        public int descriptionId { get; set; }
+        public int tableKeyId { get; set; }
     
-        public virtual BASE_Descriptions BASE_Descriptions { get; set; }
         public virtual ICollection<ERP_BankAccounts> ERP_BankAccounts { get; set; }
-        public virtual ICollection<ERP_BankRelations> ERP_BankRelations { get; set; }
     }
 }

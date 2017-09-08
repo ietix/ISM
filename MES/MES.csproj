@@ -30,8 +30,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -39,8 +46,83 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Model\MESModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MESModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MESModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MESModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MESModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MESModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MES_MSEquipmentCapabilityTestSpecifications.cs">
+      <DependentUpon>MESModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MES_MSEquipmentClassEquipments.cs">
+      <DependentUpon>MESModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MES_MSEquipmentClasses.cs">
+      <DependentUpon>MESModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MES_MSEquipmentClassProperties.cs">
+      <DependentUpon>MESModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MES_MSEquipmentProperties.cs">
+      <DependentUpon>MESModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MES_MSEquipments.cs">
+      <DependentUpon>MESModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MES_MSProperties.cs">
+      <DependentUpon>MESModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MES_MSPropertyValues.cs">
+      <DependentUpon>MESModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MES_MSTestedEquipmentClassProperties.cs">
+      <DependentUpon>MESModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MES_MSTestedEquipmentProperties.cs">
+      <DependentUpon>MESModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Mappings\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Model\MESModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MESModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Model\MESModel.edmx.diagram">
+      <DependentUpon>MESModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model\MESModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MESModel.edmx</DependentUpon>
+      <LastGenOutput>MESModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\MESModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MESModel.edmx</DependentUpon>
+      <LastGenOutput>MESModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

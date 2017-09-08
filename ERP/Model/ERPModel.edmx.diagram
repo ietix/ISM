@@ -4,142 +4,63 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="45ee6d3d8e0c46fe8aaaaa48a5e1c34d" Name="Diagram1">
-        <EntityTypeShape EntityType="IMSModel.AFIP_ConceptosIncluidos" Width="1.5" PointX="5.25" PointY="22.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.AFIP_Iva" Width="1.5" PointX="5.25" PointY="25.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.AFIP_TiposComprobante" Width="1.5" PointX="5.25" PointY="28.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.AFIP_TiposDocumento" Width="1.5" PointX="5.25" PointY="34.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.AFIP_TiposMonedas" Width="1.5" PointX="5.25" PointY="40.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.AFIP_UnidadesMedida" Width="1.5" PointX="5.25" PointY="44.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.BASE_Cities" Width="1.5" PointX="5.25" PointY="47.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.BASE_Countries" Width="1.5" PointX="5.25" PointY="51" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.BASE_Descriptions" Width="1.5" PointX="3" PointY="45.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.BASE_Languages" Width="1.5" PointX="0.75" PointY="46.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.BASE_PostalCodes" Width="1.5" PointX="7.5" PointY="40.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.BASE_Profiles" Width="1.5" PointX="5.25" PointY="53.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.BASE_ProfilesResources" Width="1.5" PointX="7.5" PointY="53.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.BASE_Provinces" Width="1.5" PointX="7.5" PointY="47.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.BASE_Resources" Width="1.5" PointX="5.25" PointY="76.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.BASE_Uom" Width="1.5" PointX="5.25" PointY="56.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.BASE_UserProfiles" Width="1.5" PointX="7.5" PointY="56.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.BASE_Users" Width="1.5" PointX="5.25" PointY="79.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.ERP_Addresses" Width="1.5" PointX="9.75" PointY="33.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.ERP_Articles" Width="1.5" PointX="7.5" PointY="43.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.ERP_ArticlesClient" Width="1.5" PointX="9.75" PointY="38" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.ERP_ArticlesSupplier" Width="1.5" PointX="12.75" PointY="36.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.ERP_ArticleSupplierCostHistory" Width="1.5" PointX="18" PointY="38.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.ERP_BankAccounts" Width="1.5" PointX="12.75" PointY="43" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.ERP_BankRelations" Width="1.5" PointX="9.75" PointY="47.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.ERP_Banks" Width="1.5" PointX="5.25" PointY="60.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.ERP_Clients" Width="1.5" PointX="7.5" PointY="31.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.ERP_Companies" Width="1.5" PointX="7.5" PointY="22" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.ERP_Contacts" Width="1.5" PointX="12.75" PointY="47.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.ERP_ContactTypes" Width="1.5" PointX="5.25" PointY="63" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.ERP_Contracts" Width="1.5" PointX="12.75" PointY="39.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.ERP_CreditNote" Width="1.5" PointX="15.75" PointY="35.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.ERP_Invoices" Width="1.5" PointX="10.5" PointY="40.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.ERP_ItemsContract" Width="1.5" PointX="18" PointY="41.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.ERP_ItemsCreditNote" Width="1.5" PointX="18" PointY="46" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.ERP_ItemsSalesOrder" Width="1.5" PointX="17.25" PointY="49.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.ERP_ItemsShippingNote" Width="1.5" PointX="20.25" PointY="45.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.ERP_Payments" Width="1.5" PointX="12.75" PointY="53.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.ERP_PaymentTypes" Width="1.5" PointX="5.25" PointY="65.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.ERP_PointsOfSales" Width="1.5" PointX="8.25" PointY="25.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.ERP_PriceArticlesHistory" Width="1.5" PointX="15.75" PointY="42.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.ERP_SalesConditions" Width="1.5" PointX="5.25" PointY="68.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.ERP_SalesOrder" Width="1.5" PointX="15" PointY="48.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.ERP_SalesOrderStates" Width="1.5" PointX="5.25" PointY="71.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.ERP_ShippingNote" Width="1.5" PointX="15" PointY="52.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.ERP_ShippingNotesInvoices" Width="1.5" PointX="15.75" PointY="45.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.ERP_ShippingNoteStates" Width="1.5" PointX="5.25" PointY="74" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.ERP_Suppliers" Width="1.5" PointX="7.5" PointY="35.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.RPT_Reports" Width="1.5" PointX="8.25" PointY="18.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="IMSModel.RPT_ReportsPointOfSales" Width="1.5" PointX="10.5" PointY="26.625" IsExpanded="true" />
-        <AssociationConnector Association="IMSModel.FK_AFIP_ConceptosIncluidos_BASE_Descriptions" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_Facturas_AFIP_ConceptosIncluidos" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_AFIP_Iva_BASE_Descriptions" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_Facturas_AFIP_Iva" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_AFIP_TiposComprobante_BASE_Descriptions" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_Facturas_AFIP_TiposComprobante" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_NotasDeCredito_AFIP_TiposComprobante" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_AFIP_TiposDocumento_BASE_Descriptions" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_Clientes_AFIP_TiposDocumento" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_Proveedores_AFIP_TiposDocumento" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_AFIP_TiposMonedas_BASE_Descriptions" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_Facturas_AFIP_TiposMonedas" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_HistorialCostosArticuloProveedor_AFIP_TiposMonedas" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_HistorialPreciosArticulo_AFIP_TiposMonedas" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ItemsContratoMarco_AFIP_TiposMonedas" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_AFIP_UnidadesMedida_BASE_Descriptions" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_Articulos_AFIP_UnidadesMedida" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_BASE_Cities_BASE_Descriptions" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_BASE_Cities_BASE_Provinces" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_BASE_PostalCodes_BASE_Cities" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ERP_Addresses_BASE_Cities" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_BASE_Countries_BASE_Descriptions" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_BASE_Provinces_BASE_Countries" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_BASE_Descriptions_BASE_Languages" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_BASE_Perfiles_BASE_Descriptions" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_BASE_Provinces_BASE_Descriptions" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_BASE_UnidadesDeMedida_BASE_Descriptions" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ERP_Banks_BASE_Descriptions" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ERP_ContactTypes_ERP_ContactTypes" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ERP_Contracts_BASE_Descriptions" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ERP_PaymentTypes_BASE_Descriptions" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ERP_SalesConditions_BASE_Descriptions" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ERP_SalesOrderStates_BASE_Descriptions" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ERP_ShippingNoteStates_BASE_Descriptions" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_BASE_PerfilesPorRecurso_BASE_Perfiles" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_BASE_UsuariosPorPerfiles_BASE_Perfiles" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_BASE_PerfilesPorRecurso_BASE_Recursos" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ERP_Addresses_BASE_Provinces" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_BASE_UnidadesDeMedida_BASE_UnidadesDeMedida" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_BASE_UsuariosPorPerfiles_BASE_Usuarios" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ERP_Addresses_ERP_Clients" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ERP_Addresses_ERP_Companies" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ERP_Addresses_ERP_Proveedores" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_Remitos_Direcciones" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ArticulosCliente_Articulos" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ArticulosProveedor_Articulos" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_HistorialPreciosArticulo_Articulos" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ItemsContratoMarco_Articulos" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ItemsPorNotaDePedido_Articulos" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ArticulosCliente_Clientes" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ArticulosProveedor_Proveedores" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_HistorialPreciosArticuloProveedor_ArticulosProveedor" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ItemsRemito_ArticulosProveedor" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ERP_BankAccounts_ERP_Banks" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ERP_BankAccounts_ERP_Clients" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ERP_BankAccounts_ERP_Companies" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ERP_BankAccounts_ERP_Proveedores" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ERP_BankRelations_ERP_Banks" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ERP_BankRelations_ERP_Clients" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ERP_BankRelations_ERP_Proveedores" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ERP_Contacts_ERP_Clients" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ERP_Contracts_ERP_Clients" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_NotasDePedido_Clientes" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ERP_Contacts_ERP_Contacts" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ERP_Contacts_ERP_Proveedores" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ItemsContratoMarco_ContratosMarco" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_NotasDePedido_ContratosMarco" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ERP_CreditNote_ERP_PuntosDeVenta" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ERP_ItemsCreditNote_ERP_NotasDeCredito" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_NotasDeCredito_Facturas" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ERP_Facturas_ERP_CondicionDeVenta" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ERP_Invoices_ERP_PuntosDeVenta" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ERP_Pagos_ERP_Facturas" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_RemitosPorFactura_Facturas" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ERP_ItemsCreditNote_ERP_Remitos" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ItemsPorNotaDePedido_NotasDePedido" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ItemsRemito_ItemsNotaDePedido" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ItemsRemito_Remito" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ERP_Pagos_ERP_FormasDePago" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ERP_ShippingNote_ERP_PointsOfSales" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_RPT_ReportsPointOfSales_ERP_PointsOfSales" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ERP_SalesOrder_ERP_SalesOrderStates" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_ERP_ShippingNote_ERP_ShippingNoteStates" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_RemitosPorFactura_Remitos" ManuallyRouted="false" />
-        <AssociationConnector Association="IMSModel.FK_RPT_ReportsPointOfSales_RPT_Reports" ManuallyRouted="false" />
+      <Diagram DiagramId="7dea96fc2c8d42699ca101b5e6b6e381" Name="Diagram1">
+        <EntityTypeShape EntityType="ERPModel.ERP_Addresses" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERPModel.ERP_Articles" Width="1.5" PointX="0.75" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERPModel.ERP_ArticlesCustomer" Width="1.5" PointX="3" PointY="27.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERPModel.ERP_ArticlesSupplier" Width="1.5" PointX="3" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERPModel.ERP_ArticleSupplierCostHistory" Width="1.5" PointX="5.25" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERPModel.ERP_BankAccounts" Width="1.5" PointX="13" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERPModel.ERP_Banks" Width="1.5" PointX="10.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERPModel.ERP_Contacts" Width="1.5" PointX="10" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERPModel.ERP_ContactTypes" Width="1.5" PointX="7.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERPModel.ERP_Contracts" Width="1.5" PointX="1.5" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERPModel.ERP_CreditNote" Width="1.5" PointX="3" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERPModel.ERP_Invoices" Width="1.5" PointX="6" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERPModel.ERP_ItemsContract" Width="1.5" PointX="6.75" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERPModel.ERP_ItemsCreditNote" Width="1.5" PointX="8.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERPModel.ERP_ItemsSalesOrder" Width="1.5" PointX="3" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERPModel.ERP_ItemsShippingNote" Width="1.5" PointX="5.25" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERPModel.ERP_Payments" Width="1.5" PointX="8.25" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERPModel.ERP_PaymentTypes" Width="1.5" PointX="6" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERPModel.ERP_Persons" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERPModel.ERP_PersonTypes" Width="1.5" PointX="8.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERPModel.ERP_PointsOfSales" Width="1.5" PointX="0.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERPModel.ERP_PriceArticlesHistory" Width="1.5" PointX="3" PointY="30.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERPModel.ERP_SalesConditions" Width="1.5" PointX="3.75" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERPModel.ERP_SalesOrder" Width="1.5" PointX="0.75" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERPModel.ERP_SalesOrderStates" Width="1.5" PointX="1.5" PointY="24.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERPModel.ERP_ShippingNote" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERPModel.ERP_ShippingNotesInvoices" Width="1.5" PointX="11.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERPModel.ERP_ShippingNoteStates" Width="1.5" PointX="0.75" PointY="4.375" IsExpanded="true" />
+        <AssociationConnector Association="ERPModel.FK_Remitos_Direcciones" ManuallyRouted="false" />
+        <AssociationConnector Association="ERPModel.FK_ArticulosCliente_Articulos" ManuallyRouted="false" />
+        <AssociationConnector Association="ERPModel.FK_ArticulosProveedor_Articulos" ManuallyRouted="false" />
+        <AssociationConnector Association="ERPModel.FK_HistorialPreciosArticulo_Articulos" ManuallyRouted="false" />
+        <AssociationConnector Association="ERPModel.FK_ItemsContratoMarco_Articulos" ManuallyRouted="false" />
+        <AssociationConnector Association="ERPModel.FK_ItemsPorNotaDePedido_Articulos" ManuallyRouted="false" />
+        <AssociationConnector Association="ERPModel.FK_HistorialPreciosArticuloProveedor_ArticulosProveedor" ManuallyRouted="false" />
+        <AssociationConnector Association="ERPModel.FK_ItemsRemito_ArticulosProveedor" ManuallyRouted="false" />
+        <AssociationConnector Association="ERPModel.FK_ERP_BankAccounts_ERP_Banks" ManuallyRouted="false" />
+        <AssociationConnector Association="ERPModel.FK_ERP_Contacts_ERP_Contacts" ManuallyRouted="false" />
+        <AssociationConnector Association="ERPModel.FK_ItemsContratoMarco_ContratosMarco" ManuallyRouted="false" />
+        <AssociationConnector Association="ERPModel.FK_NotasDePedido_ContratosMarco" ManuallyRouted="false" />
+        <AssociationConnector Association="ERPModel.FK_ERP_CreditNote_ERP_PuntosDeVenta" ManuallyRouted="false" />
+        <AssociationConnector Association="ERPModel.FK_ERP_ItemsCreditNote_ERP_NotasDeCredito" ManuallyRouted="false" />
+        <AssociationConnector Association="ERPModel.FK_NotasDeCredito_Facturas" ManuallyRouted="false" />
+        <AssociationConnector Association="ERPModel.FK_ERP_Facturas_ERP_CondicionDeVenta" ManuallyRouted="false" />
+        <AssociationConnector Association="ERPModel.FK_ERP_Invoices_ERP_PuntosDeVenta" ManuallyRouted="false" />
+        <AssociationConnector Association="ERPModel.FK_ERP_Pagos_ERP_Facturas" ManuallyRouted="false" />
+        <AssociationConnector Association="ERPModel.FK_RemitosPorFactura_Facturas" ManuallyRouted="false" />
+        <AssociationConnector Association="ERPModel.FK_ERP_ItemsCreditNote_ERP_Remitos" ManuallyRouted="false" />
+        <AssociationConnector Association="ERPModel.FK_ItemsPorNotaDePedido_NotasDePedido" ManuallyRouted="false" />
+        <AssociationConnector Association="ERPModel.FK_ItemsRemito_ItemsNotaDePedido" ManuallyRouted="false" />
+        <AssociationConnector Association="ERPModel.FK_ItemsRemito_Remito" ManuallyRouted="false" />
+        <AssociationConnector Association="ERPModel.FK_ERP_Pagos_ERP_FormasDePago" ManuallyRouted="false" />
+        <AssociationConnector Association="ERPModel.FK_ERP_ShippingNote_ERP_PointsOfSales" ManuallyRouted="false" />
+        <AssociationConnector Association="ERPModel.FK_ERP_SalesOrder_ERP_SalesOrderStates" ManuallyRouted="false" />
+        <AssociationConnector Association="ERPModel.FK_ERP_ShippingNote_ERP_ShippingNoteStates" ManuallyRouted="false" />
+        <AssociationConnector Association="ERPModel.FK_RemitosPorFactura_Remitos" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

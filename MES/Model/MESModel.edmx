@@ -1,0 +1,846 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MESModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="MESModelStoreContainer">
+          <EntitySet Name="MES_MSEquipmentCapabilityTestSpecifications" EntityType="MESModel.Store.MES_MSEquipmentCapabilityTestSpecifications" store:Type="Tables" Schema="dbo" Table="MES.MSEquipmentCapabilityTestSpecifications" />
+          <EntitySet Name="MES_MSEquipmentClassEquipments" EntityType="MESModel.Store.MES_MSEquipmentClassEquipments" store:Type="Tables" Schema="dbo" Table="MES.MSEquipmentClassEquipments" />
+          <EntitySet Name="MES_MSEquipmentClasses" EntityType="MESModel.Store.MES_MSEquipmentClasses" store:Type="Tables" Schema="dbo" Table="MES.MSEquipmentClasses" />
+          <EntitySet Name="MES_MSEquipmentClassProperties" EntityType="MESModel.Store.MES_MSEquipmentClassProperties" store:Type="Tables" Schema="dbo" Table="MES.MSEquipmentClassProperties" />
+          <EntitySet Name="MES_MSEquipmentProperties" EntityType="MESModel.Store.MES_MSEquipmentProperties" store:Type="Tables" Schema="dbo" Table="MES.MSEquipmentProperties" />
+          <EntitySet Name="MES_MSEquipments" EntityType="MESModel.Store.MES_MSEquipments" store:Type="Tables" Schema="dbo" Table="MES.MSEquipments" />
+          <EntitySet Name="MES_MSProperties" EntityType="MESModel.Store.MES_MSProperties" store:Type="Tables" Schema="dbo" Table="MES.MSProperties" />
+          <EntitySet Name="MES_MSPropertyValues" EntityType="MESModel.Store.MES_MSPropertyValues" store:Type="Tables" Schema="dbo" Table="MES.MSPropertyValues" />
+          <EntitySet Name="MES_MSTestedEquipmentClassProperties" EntityType="MESModel.Store.MES_MSTestedEquipmentClassProperties" store:Type="Tables" Schema="dbo" Table="MES.MSTestedEquipmentClassProperties" />
+          <EntitySet Name="MES_MSTestedEquipmentProperties" EntityType="MESModel.Store.MES_MSTestedEquipmentProperties" store:Type="Tables" Schema="dbo" Table="MES.MSTestedEquipmentProperties" />
+          <AssociationSet Name="FK_MES_MSEquipmentClassEquipments_MES_MSEquipmentClasses" Association="MESModel.Store.FK_MES_MSEquipmentClassEquipments_MES_MSEquipmentClasses">
+            <End Role="MES_MSEquipmentClasses" EntitySet="MES_MSEquipmentClasses" />
+            <End Role="MES_MSEquipmentClassEquipments" EntitySet="MES_MSEquipmentClassEquipments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MES_MSEquipmentClassEquipments_MES_MSEquipments" Association="MESModel.Store.FK_MES_MSEquipmentClassEquipments_MES_MSEquipments">
+            <End Role="MES_MSEquipments" EntitySet="MES_MSEquipments" />
+            <End Role="MES_MSEquipmentClassEquipments" EntitySet="MES_MSEquipmentClassEquipments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MES_MSEquipmentClasses_MES_MSEquipmentClasses" Association="MESModel.Store.FK_MES_MSEquipmentClasses_MES_MSEquipmentClasses">
+            <End Role="MES_MSEquipmentClasses" EntitySet="MES_MSEquipmentClasses" />
+            <End Role="MES_MSEquipmentClasses1" EntitySet="MES_MSEquipmentClasses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MES_MSEquipmentClassProperties_MES_MSEquipmentClasses" Association="MESModel.Store.FK_MES_MSEquipmentClassProperties_MES_MSEquipmentClasses">
+            <End Role="MES_MSEquipmentClasses" EntitySet="MES_MSEquipmentClasses" />
+            <End Role="MES_MSEquipmentClassProperties" EntitySet="MES_MSEquipmentClassProperties" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MES_MSEquipmentClassProperties_MES_MSProperties" Association="MESModel.Store.FK_MES_MSEquipmentClassProperties_MES_MSProperties">
+            <End Role="MES_MSProperties" EntitySet="MES_MSProperties" />
+            <End Role="MES_MSEquipmentClassProperties" EntitySet="MES_MSEquipmentClassProperties" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MES_MSEquipmentClassProperties_MES_MSPropertyValues" Association="MESModel.Store.FK_MES_MSEquipmentClassProperties_MES_MSPropertyValues">
+            <End Role="MES_MSPropertyValues" EntitySet="MES_MSPropertyValues" />
+            <End Role="MES_MSEquipmentClassProperties" EntitySet="MES_MSEquipmentClassProperties" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MES_MSEquipmentProperties_MES_MSEquipments" Association="MESModel.Store.FK_MES_MSEquipmentProperties_MES_MSEquipments">
+            <End Role="MES_MSEquipments" EntitySet="MES_MSEquipments" />
+            <End Role="MES_MSEquipmentProperties" EntitySet="MES_MSEquipmentProperties" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MES_MSEquipmentProperties_MES_MSProperties" Association="MESModel.Store.FK_MES_MSEquipmentProperties_MES_MSProperties">
+            <End Role="MES_MSProperties" EntitySet="MES_MSProperties" />
+            <End Role="MES_MSEquipmentProperties" EntitySet="MES_MSEquipmentProperties" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MES_MSEquipmentProperties_MES_MSPropertyValues" Association="MESModel.Store.FK_MES_MSEquipmentProperties_MES_MSPropertyValues">
+            <End Role="MES_MSPropertyValues" EntitySet="MES_MSPropertyValues" />
+            <End Role="MES_MSEquipmentProperties" EntitySet="MES_MSEquipmentProperties" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MES_MSTestedEquipmentClassProperties_MES_MSEquipmentCapabilityTestSpecifications" Association="MESModel.Store.FK_MES_MSTestedEquipmentClassProperties_MES_MSEquipmentCapabilityTestSpecifications">
+            <End Role="MES_MSEquipmentCapabilityTestSpecifications" EntitySet="MES_MSEquipmentCapabilityTestSpecifications" />
+            <End Role="MES_MSTestedEquipmentClassProperties" EntitySet="MES_MSTestedEquipmentClassProperties" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MES_MSTestedEquipmentClassProperties_MES_MSEquipmentClasses" Association="MESModel.Store.FK_MES_MSTestedEquipmentClassProperties_MES_MSEquipmentClasses">
+            <End Role="MES_MSEquipmentClasses" EntitySet="MES_MSEquipmentClasses" />
+            <End Role="MES_MSTestedEquipmentClassProperties" EntitySet="MES_MSTestedEquipmentClassProperties" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MES_MSTestedEquipmentClassProperties_MES_MSEquipmentClassProperties" Association="MESModel.Store.FK_MES_MSTestedEquipmentClassProperties_MES_MSEquipmentClassProperties">
+            <End Role="MES_MSEquipmentClassProperties" EntitySet="MES_MSEquipmentClassProperties" />
+            <End Role="MES_MSTestedEquipmentClassProperties" EntitySet="MES_MSTestedEquipmentClassProperties" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MES_MSTestedEquipmentProperties_MES_MSEquipmentCapabilityTestSpecifications" Association="MESModel.Store.FK_MES_MSTestedEquipmentProperties_MES_MSEquipmentCapabilityTestSpecifications">
+            <End Role="MES_MSEquipmentCapabilityTestSpecifications" EntitySet="MES_MSEquipmentCapabilityTestSpecifications" />
+            <End Role="MES_MSTestedEquipmentProperties" EntitySet="MES_MSTestedEquipmentProperties" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MES_MSTestedEquipmentProperties_MES_MSEquipmentProperties" Association="MESModel.Store.FK_MES_MSTestedEquipmentProperties_MES_MSEquipmentProperties">
+            <End Role="MES_MSEquipmentProperties" EntitySet="MES_MSEquipmentProperties" />
+            <End Role="MES_MSTestedEquipmentProperties" EntitySet="MES_MSTestedEquipmentProperties" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MES_MSTestedEquipmentProperties_MES_MSEquipments" Association="MESModel.Store.FK_MES_MSTestedEquipmentProperties_MES_MSEquipments">
+            <End Role="MES_MSEquipments" EntitySet="MES_MSEquipments" />
+            <End Role="MES_MSTestedEquipmentProperties" EntitySet="MES_MSTestedEquipmentProperties" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="MES_MSEquipmentCapabilityTestSpecifications">
+          <Key>
+            <PropertyRef Name="equipmentCapabilitiyTestSpecificationId" />
+          </Key>
+          <Property Name="equipmentCapabilitiyTestSpecificationId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="description" Type="varchar" Nullable="false" MaxLength="256" />
+          <Property Name="version" Type="varchar" Nullable="false" MaxLength="16" />
+        </EntityType>
+        <EntityType Name="MES_MSEquipmentClassEquipments">
+          <Key>
+            <PropertyRef Name="equipmentClassEquipmentsId" />
+          </Key>
+          <Property Name="equipmentClassEquipmentsId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="equipmentClassId" Type="int" Nullable="false" />
+          <Property Name="equipmentId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MES_MSEquipmentClasses">
+          <Key>
+            <PropertyRef Name="equipmentClassId" />
+          </Key>
+          <Property Name="equipmentClassId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="description" Type="varchar" Nullable="false" MaxLength="256" />
+          <Property Name="equipmentClassBaseId" Type="int" />
+        </EntityType>
+        <EntityType Name="MES_MSEquipmentClassProperties">
+          <Key>
+            <PropertyRef Name="equipmentClassPropertyId" />
+          </Key>
+          <Property Name="equipmentClassPropertyId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="equipmentClassId" Type="int" Nullable="false" />
+          <Property Name="propertyId" Type="int" Nullable="false" />
+          <Property Name="propertyValueId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MES_MSEquipmentProperties">
+          <Key>
+            <PropertyRef Name="equipmentPropertyId" />
+          </Key>
+          <Property Name="equipmentPropertyId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="equipmentId" Type="int" Nullable="false" />
+          <Property Name="propertyId" Type="int" Nullable="false" />
+          <Property Name="propertyValueId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MES_MSEquipments">
+          <Key>
+            <PropertyRef Name="equipmentId" />
+          </Key>
+          <Property Name="equipmentId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="description" Type="varchar" Nullable="false" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="MES_MSProperties">
+          <Key>
+            <PropertyRef Name="propertyId" />
+          </Key>
+          <Property Name="propertyId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="descriptionId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MES_MSPropertyValues">
+          <Key>
+            <PropertyRef Name="propertyValueId" />
+          </Key>
+          <Property Name="propertyValueId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="valueString" Type="varchar(max)" Nullable="false" />
+          <Property Name="dataType" Type="varchar" Nullable="false" MaxLength="16" />
+          <Property Name="uomId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MES_MSTestedEquipmentClassProperties">
+          <Key>
+            <PropertyRef Name="testedEquipmentClassPropertyId" />
+          </Key>
+          <Property Name="testedEquipmentClassPropertyId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="equipmentClassId" Type="int" Nullable="false" />
+          <Property Name="equipmentClassPropertyId" Type="int" Nullable="false" />
+          <Property Name="equipmentCapabilitiyTestSpecificationId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MES_MSTestedEquipmentProperties">
+          <Key>
+            <PropertyRef Name="testedEquipmentPropertyId" />
+          </Key>
+          <Property Name="testedEquipmentPropertyId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="equipmentId" Type="int" Nullable="false" />
+          <Property Name="equipmentPropertyId" Type="int" Nullable="false" />
+          <Property Name="equipmentCapabilitiyTestSpecificationId" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_MES_MSEquipmentClassEquipments_MES_MSEquipmentClasses">
+          <End Role="MES_MSEquipmentClasses" Type="MESModel.Store.MES_MSEquipmentClasses" Multiplicity="1" />
+          <End Role="MES_MSEquipmentClassEquipments" Type="MESModel.Store.MES_MSEquipmentClassEquipments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MES_MSEquipmentClasses">
+              <PropertyRef Name="equipmentClassId" />
+            </Principal>
+            <Dependent Role="MES_MSEquipmentClassEquipments">
+              <PropertyRef Name="equipmentClassId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MES_MSEquipmentClassEquipments_MES_MSEquipments">
+          <End Role="MES_MSEquipments" Type="MESModel.Store.MES_MSEquipments" Multiplicity="1" />
+          <End Role="MES_MSEquipmentClassEquipments" Type="MESModel.Store.MES_MSEquipmentClassEquipments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MES_MSEquipments">
+              <PropertyRef Name="equipmentId" />
+            </Principal>
+            <Dependent Role="MES_MSEquipmentClassEquipments">
+              <PropertyRef Name="equipmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MES_MSEquipmentClasses_MES_MSEquipmentClasses">
+          <End Role="MES_MSEquipmentClasses" Type="MESModel.Store.MES_MSEquipmentClasses" Multiplicity="0..1" />
+          <End Role="MES_MSEquipmentClasses1" Type="MESModel.Store.MES_MSEquipmentClasses" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MES_MSEquipmentClasses">
+              <PropertyRef Name="equipmentClassId" />
+            </Principal>
+            <Dependent Role="MES_MSEquipmentClasses1">
+              <PropertyRef Name="equipmentClassBaseId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MES_MSEquipmentClassProperties_MES_MSEquipmentClasses">
+          <End Role="MES_MSEquipmentClasses" Type="MESModel.Store.MES_MSEquipmentClasses" Multiplicity="1" />
+          <End Role="MES_MSEquipmentClassProperties" Type="MESModel.Store.MES_MSEquipmentClassProperties" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MES_MSEquipmentClasses">
+              <PropertyRef Name="equipmentClassId" />
+            </Principal>
+            <Dependent Role="MES_MSEquipmentClassProperties">
+              <PropertyRef Name="equipmentClassId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MES_MSEquipmentClassProperties_MES_MSProperties">
+          <End Role="MES_MSProperties" Type="MESModel.Store.MES_MSProperties" Multiplicity="1" />
+          <End Role="MES_MSEquipmentClassProperties" Type="MESModel.Store.MES_MSEquipmentClassProperties" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MES_MSProperties">
+              <PropertyRef Name="propertyId" />
+            </Principal>
+            <Dependent Role="MES_MSEquipmentClassProperties">
+              <PropertyRef Name="propertyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MES_MSEquipmentClassProperties_MES_MSPropertyValues">
+          <End Role="MES_MSPropertyValues" Type="MESModel.Store.MES_MSPropertyValues" Multiplicity="1" />
+          <End Role="MES_MSEquipmentClassProperties" Type="MESModel.Store.MES_MSEquipmentClassProperties" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MES_MSPropertyValues">
+              <PropertyRef Name="propertyValueId" />
+            </Principal>
+            <Dependent Role="MES_MSEquipmentClassProperties">
+              <PropertyRef Name="propertyValueId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MES_MSEquipmentProperties_MES_MSEquipments">
+          <End Role="MES_MSEquipments" Type="MESModel.Store.MES_MSEquipments" Multiplicity="1" />
+          <End Role="MES_MSEquipmentProperties" Type="MESModel.Store.MES_MSEquipmentProperties" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MES_MSEquipments">
+              <PropertyRef Name="equipmentId" />
+            </Principal>
+            <Dependent Role="MES_MSEquipmentProperties">
+              <PropertyRef Name="equipmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MES_MSEquipmentProperties_MES_MSProperties">
+          <End Role="MES_MSProperties" Type="MESModel.Store.MES_MSProperties" Multiplicity="1" />
+          <End Role="MES_MSEquipmentProperties" Type="MESModel.Store.MES_MSEquipmentProperties" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MES_MSProperties">
+              <PropertyRef Name="propertyId" />
+            </Principal>
+            <Dependent Role="MES_MSEquipmentProperties">
+              <PropertyRef Name="propertyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MES_MSEquipmentProperties_MES_MSPropertyValues">
+          <End Role="MES_MSPropertyValues" Type="MESModel.Store.MES_MSPropertyValues" Multiplicity="1" />
+          <End Role="MES_MSEquipmentProperties" Type="MESModel.Store.MES_MSEquipmentProperties" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MES_MSPropertyValues">
+              <PropertyRef Name="propertyValueId" />
+            </Principal>
+            <Dependent Role="MES_MSEquipmentProperties">
+              <PropertyRef Name="propertyValueId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MES_MSTestedEquipmentClassProperties_MES_MSEquipmentCapabilityTestSpecifications">
+          <End Role="MES_MSEquipmentCapabilityTestSpecifications" Type="MESModel.Store.MES_MSEquipmentCapabilityTestSpecifications" Multiplicity="1" />
+          <End Role="MES_MSTestedEquipmentClassProperties" Type="MESModel.Store.MES_MSTestedEquipmentClassProperties" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MES_MSEquipmentCapabilityTestSpecifications">
+              <PropertyRef Name="equipmentCapabilitiyTestSpecificationId" />
+            </Principal>
+            <Dependent Role="MES_MSTestedEquipmentClassProperties">
+              <PropertyRef Name="equipmentCapabilitiyTestSpecificationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MES_MSTestedEquipmentClassProperties_MES_MSEquipmentClasses">
+          <End Role="MES_MSEquipmentClasses" Type="MESModel.Store.MES_MSEquipmentClasses" Multiplicity="1" />
+          <End Role="MES_MSTestedEquipmentClassProperties" Type="MESModel.Store.MES_MSTestedEquipmentClassProperties" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MES_MSEquipmentClasses">
+              <PropertyRef Name="equipmentClassId" />
+            </Principal>
+            <Dependent Role="MES_MSTestedEquipmentClassProperties">
+              <PropertyRef Name="equipmentClassId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MES_MSTestedEquipmentClassProperties_MES_MSEquipmentClassProperties">
+          <End Role="MES_MSEquipmentClassProperties" Type="MESModel.Store.MES_MSEquipmentClassProperties" Multiplicity="1" />
+          <End Role="MES_MSTestedEquipmentClassProperties" Type="MESModel.Store.MES_MSTestedEquipmentClassProperties" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MES_MSEquipmentClassProperties">
+              <PropertyRef Name="equipmentClassPropertyId" />
+            </Principal>
+            <Dependent Role="MES_MSTestedEquipmentClassProperties">
+              <PropertyRef Name="equipmentClassPropertyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MES_MSTestedEquipmentProperties_MES_MSEquipmentCapabilityTestSpecifications">
+          <End Role="MES_MSEquipmentCapabilityTestSpecifications" Type="MESModel.Store.MES_MSEquipmentCapabilityTestSpecifications" Multiplicity="1" />
+          <End Role="MES_MSTestedEquipmentProperties" Type="MESModel.Store.MES_MSTestedEquipmentProperties" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MES_MSEquipmentCapabilityTestSpecifications">
+              <PropertyRef Name="equipmentCapabilitiyTestSpecificationId" />
+            </Principal>
+            <Dependent Role="MES_MSTestedEquipmentProperties">
+              <PropertyRef Name="equipmentCapabilitiyTestSpecificationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MES_MSTestedEquipmentProperties_MES_MSEquipmentProperties">
+          <End Role="MES_MSEquipmentProperties" Type="MESModel.Store.MES_MSEquipmentProperties" Multiplicity="1" />
+          <End Role="MES_MSTestedEquipmentProperties" Type="MESModel.Store.MES_MSTestedEquipmentProperties" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MES_MSEquipmentProperties">
+              <PropertyRef Name="equipmentPropertyId" />
+            </Principal>
+            <Dependent Role="MES_MSTestedEquipmentProperties">
+              <PropertyRef Name="equipmentPropertyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MES_MSTestedEquipmentProperties_MES_MSEquipments">
+          <End Role="MES_MSEquipments" Type="MESModel.Store.MES_MSEquipments" Multiplicity="1" />
+          <End Role="MES_MSTestedEquipmentProperties" Type="MESModel.Store.MES_MSTestedEquipmentProperties" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MES_MSEquipments">
+              <PropertyRef Name="equipmentId" />
+            </Principal>
+            <Dependent Role="MES_MSTestedEquipmentProperties">
+              <PropertyRef Name="equipmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MESModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="MES_MSEquipmentCapabilityTestSpecifications" EntityType="MESModel.MES_MSEquipmentCapabilityTestSpecifications" />
+          <EntitySet Name="MES_MSEquipmentClassEquipments" EntityType="MESModel.MES_MSEquipmentClassEquipments" />
+          <EntitySet Name="MES_MSEquipmentClasses" EntityType="MESModel.MES_MSEquipmentClasses" />
+          <EntitySet Name="MES_MSEquipmentClassProperties" EntityType="MESModel.MES_MSEquipmentClassProperties" />
+          <EntitySet Name="MES_MSEquipmentProperties" EntityType="MESModel.MES_MSEquipmentProperties" />
+          <EntitySet Name="MES_MSEquipments" EntityType="MESModel.MES_MSEquipments" />
+          <EntitySet Name="MES_MSProperties" EntityType="MESModel.MES_MSProperties" />
+          <EntitySet Name="MES_MSPropertyValues" EntityType="MESModel.MES_MSPropertyValues" />
+          <EntitySet Name="MES_MSTestedEquipmentClassProperties" EntityType="MESModel.MES_MSTestedEquipmentClassProperties" />
+          <EntitySet Name="MES_MSTestedEquipmentProperties" EntityType="MESModel.MES_MSTestedEquipmentProperties" />
+          <AssociationSet Name="FK_MES_MSTestedEquipmentClassProperties_MES_MSEquipmentCapabilityTestSpecifications" Association="MESModel.FK_MES_MSTestedEquipmentClassProperties_MES_MSEquipmentCapabilityTestSpecifications">
+            <End Role="MES_MSEquipmentCapabilityTestSpecifications" EntitySet="MES_MSEquipmentCapabilityTestSpecifications" />
+            <End Role="MES_MSTestedEquipmentClassProperties" EntitySet="MES_MSTestedEquipmentClassProperties" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MES_MSTestedEquipmentProperties_MES_MSEquipmentCapabilityTestSpecifications" Association="MESModel.FK_MES_MSTestedEquipmentProperties_MES_MSEquipmentCapabilityTestSpecifications">
+            <End Role="MES_MSEquipmentCapabilityTestSpecifications" EntitySet="MES_MSEquipmentCapabilityTestSpecifications" />
+            <End Role="MES_MSTestedEquipmentProperties" EntitySet="MES_MSTestedEquipmentProperties" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MES_MSEquipmentClassEquipments_MES_MSEquipmentClasses" Association="MESModel.FK_MES_MSEquipmentClassEquipments_MES_MSEquipmentClasses">
+            <End Role="MES_MSEquipmentClasses" EntitySet="MES_MSEquipmentClasses" />
+            <End Role="MES_MSEquipmentClassEquipments" EntitySet="MES_MSEquipmentClassEquipments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MES_MSEquipmentClassEquipments_MES_MSEquipments" Association="MESModel.FK_MES_MSEquipmentClassEquipments_MES_MSEquipments">
+            <End Role="MES_MSEquipments" EntitySet="MES_MSEquipments" />
+            <End Role="MES_MSEquipmentClassEquipments" EntitySet="MES_MSEquipmentClassEquipments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MES_MSEquipmentClasses_MES_MSEquipmentClasses" Association="MESModel.FK_MES_MSEquipmentClasses_MES_MSEquipmentClasses">
+            <End Role="MES_MSEquipmentClasses" EntitySet="MES_MSEquipmentClasses" />
+            <End Role="MES_MSEquipmentClasses1" EntitySet="MES_MSEquipmentClasses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MES_MSEquipmentClassProperties_MES_MSEquipmentClasses" Association="MESModel.FK_MES_MSEquipmentClassProperties_MES_MSEquipmentClasses">
+            <End Role="MES_MSEquipmentClasses" EntitySet="MES_MSEquipmentClasses" />
+            <End Role="MES_MSEquipmentClassProperties" EntitySet="MES_MSEquipmentClassProperties" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MES_MSTestedEquipmentClassProperties_MES_MSEquipmentClasses" Association="MESModel.FK_MES_MSTestedEquipmentClassProperties_MES_MSEquipmentClasses">
+            <End Role="MES_MSEquipmentClasses" EntitySet="MES_MSEquipmentClasses" />
+            <End Role="MES_MSTestedEquipmentClassProperties" EntitySet="MES_MSTestedEquipmentClassProperties" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MES_MSEquipmentClassProperties_MES_MSProperties" Association="MESModel.FK_MES_MSEquipmentClassProperties_MES_MSProperties">
+            <End Role="MES_MSProperties" EntitySet="MES_MSProperties" />
+            <End Role="MES_MSEquipmentClassProperties" EntitySet="MES_MSEquipmentClassProperties" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MES_MSEquipmentClassProperties_MES_MSPropertyValues" Association="MESModel.FK_MES_MSEquipmentClassProperties_MES_MSPropertyValues">
+            <End Role="MES_MSPropertyValues" EntitySet="MES_MSPropertyValues" />
+            <End Role="MES_MSEquipmentClassProperties" EntitySet="MES_MSEquipmentClassProperties" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MES_MSTestedEquipmentClassProperties_MES_MSEquipmentClassProperties" Association="MESModel.FK_MES_MSTestedEquipmentClassProperties_MES_MSEquipmentClassProperties">
+            <End Role="MES_MSEquipmentClassProperties" EntitySet="MES_MSEquipmentClassProperties" />
+            <End Role="MES_MSTestedEquipmentClassProperties" EntitySet="MES_MSTestedEquipmentClassProperties" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MES_MSEquipmentProperties_MES_MSEquipments" Association="MESModel.FK_MES_MSEquipmentProperties_MES_MSEquipments">
+            <End Role="MES_MSEquipments" EntitySet="MES_MSEquipments" />
+            <End Role="MES_MSEquipmentProperties" EntitySet="MES_MSEquipmentProperties" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MES_MSEquipmentProperties_MES_MSProperties" Association="MESModel.FK_MES_MSEquipmentProperties_MES_MSProperties">
+            <End Role="MES_MSProperties" EntitySet="MES_MSProperties" />
+            <End Role="MES_MSEquipmentProperties" EntitySet="MES_MSEquipmentProperties" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MES_MSEquipmentProperties_MES_MSPropertyValues" Association="MESModel.FK_MES_MSEquipmentProperties_MES_MSPropertyValues">
+            <End Role="MES_MSPropertyValues" EntitySet="MES_MSPropertyValues" />
+            <End Role="MES_MSEquipmentProperties" EntitySet="MES_MSEquipmentProperties" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MES_MSTestedEquipmentProperties_MES_MSEquipmentProperties" Association="MESModel.FK_MES_MSTestedEquipmentProperties_MES_MSEquipmentProperties">
+            <End Role="MES_MSEquipmentProperties" EntitySet="MES_MSEquipmentProperties" />
+            <End Role="MES_MSTestedEquipmentProperties" EntitySet="MES_MSTestedEquipmentProperties" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MES_MSTestedEquipmentProperties_MES_MSEquipments" Association="MESModel.FK_MES_MSTestedEquipmentProperties_MES_MSEquipments">
+            <End Role="MES_MSEquipments" EntitySet="MES_MSEquipments" />
+            <End Role="MES_MSTestedEquipmentProperties" EntitySet="MES_MSTestedEquipmentProperties" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="MES_MSEquipmentCapabilityTestSpecifications">
+          <Key>
+            <PropertyRef Name="equipmentCapabilitiyTestSpecificationId" />
+          </Key>
+          <Property Name="equipmentCapabilitiyTestSpecificationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="64" Unicode="false" FixedLength="false" />
+          <Property Name="description" Type="String" Nullable="false" MaxLength="256" Unicode="false" FixedLength="false" />
+          <Property Name="version" Type="String" Nullable="false" MaxLength="16" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="MES_MSTestedEquipmentClassProperties" Relationship="MESModel.FK_MES_MSTestedEquipmentClassProperties_MES_MSEquipmentCapabilityTestSpecifications" FromRole="MES_MSEquipmentCapabilityTestSpecifications" ToRole="MES_MSTestedEquipmentClassProperties" />
+          <NavigationProperty Name="MES_MSTestedEquipmentProperties" Relationship="MESModel.FK_MES_MSTestedEquipmentProperties_MES_MSEquipmentCapabilityTestSpecifications" FromRole="MES_MSEquipmentCapabilityTestSpecifications" ToRole="MES_MSTestedEquipmentProperties" />
+        </EntityType>
+        <EntityType Name="MES_MSEquipmentClassEquipments">
+          <Key>
+            <PropertyRef Name="equipmentClassEquipmentsId" />
+          </Key>
+          <Property Name="equipmentClassEquipmentsId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="equipmentClassId" Type="Int32" Nullable="false" />
+          <Property Name="equipmentId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="MES_MSEquipmentClasses" Relationship="MESModel.FK_MES_MSEquipmentClassEquipments_MES_MSEquipmentClasses" FromRole="MES_MSEquipmentClassEquipments" ToRole="MES_MSEquipmentClasses" />
+          <NavigationProperty Name="MES_MSEquipments" Relationship="MESModel.FK_MES_MSEquipmentClassEquipments_MES_MSEquipments" FromRole="MES_MSEquipmentClassEquipments" ToRole="MES_MSEquipments" />
+        </EntityType>
+        <EntityType Name="MES_MSEquipmentClasses">
+          <Key>
+            <PropertyRef Name="equipmentClassId" />
+          </Key>
+          <Property Name="equipmentClassId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="64" Unicode="false" FixedLength="false" />
+          <Property Name="description" Type="String" Nullable="false" MaxLength="256" Unicode="false" FixedLength="false" />
+          <Property Name="equipmentClassBaseId" Type="Int32" />
+          <NavigationProperty Name="MES_MSEquipmentClassEquipments" Relationship="MESModel.FK_MES_MSEquipmentClassEquipments_MES_MSEquipmentClasses" FromRole="MES_MSEquipmentClasses" ToRole="MES_MSEquipmentClassEquipments" />
+          <NavigationProperty Name="MES_MSEquipmentClasses1" Relationship="MESModel.FK_MES_MSEquipmentClasses_MES_MSEquipmentClasses" FromRole="MES_MSEquipmentClasses" ToRole="MES_MSEquipmentClasses1" />
+          <NavigationProperty Name="MES_MSEquipmentClasses2" Relationship="MESModel.FK_MES_MSEquipmentClasses_MES_MSEquipmentClasses" FromRole="MES_MSEquipmentClasses1" ToRole="MES_MSEquipmentClasses" />
+          <NavigationProperty Name="MES_MSEquipmentClassProperties" Relationship="MESModel.FK_MES_MSEquipmentClassProperties_MES_MSEquipmentClasses" FromRole="MES_MSEquipmentClasses" ToRole="MES_MSEquipmentClassProperties" />
+          <NavigationProperty Name="MES_MSTestedEquipmentClassProperties" Relationship="MESModel.FK_MES_MSTestedEquipmentClassProperties_MES_MSEquipmentClasses" FromRole="MES_MSEquipmentClasses" ToRole="MES_MSTestedEquipmentClassProperties" />
+        </EntityType>
+        <EntityType Name="MES_MSEquipmentClassProperties">
+          <Key>
+            <PropertyRef Name="equipmentClassPropertyId" />
+          </Key>
+          <Property Name="equipmentClassPropertyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="equipmentClassId" Type="Int32" Nullable="false" />
+          <Property Name="propertyId" Type="Int32" Nullable="false" />
+          <Property Name="propertyValueId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="MES_MSEquipmentClasses" Relationship="MESModel.FK_MES_MSEquipmentClassProperties_MES_MSEquipmentClasses" FromRole="MES_MSEquipmentClassProperties" ToRole="MES_MSEquipmentClasses" />
+          <NavigationProperty Name="MES_MSProperties" Relationship="MESModel.FK_MES_MSEquipmentClassProperties_MES_MSProperties" FromRole="MES_MSEquipmentClassProperties" ToRole="MES_MSProperties" />
+          <NavigationProperty Name="MES_MSPropertyValues" Relationship="MESModel.FK_MES_MSEquipmentClassProperties_MES_MSPropertyValues" FromRole="MES_MSEquipmentClassProperties" ToRole="MES_MSPropertyValues" />
+          <NavigationProperty Name="MES_MSTestedEquipmentClassProperties" Relationship="MESModel.FK_MES_MSTestedEquipmentClassProperties_MES_MSEquipmentClassProperties" FromRole="MES_MSEquipmentClassProperties" ToRole="MES_MSTestedEquipmentClassProperties" />
+        </EntityType>
+        <EntityType Name="MES_MSEquipmentProperties">
+          <Key>
+            <PropertyRef Name="equipmentPropertyId" />
+          </Key>
+          <Property Name="equipmentPropertyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="equipmentId" Type="Int32" Nullable="false" />
+          <Property Name="propertyId" Type="Int32" Nullable="false" />
+          <Property Name="propertyValueId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="MES_MSEquipments" Relationship="MESModel.FK_MES_MSEquipmentProperties_MES_MSEquipments" FromRole="MES_MSEquipmentProperties" ToRole="MES_MSEquipments" />
+          <NavigationProperty Name="MES_MSProperties" Relationship="MESModel.FK_MES_MSEquipmentProperties_MES_MSProperties" FromRole="MES_MSEquipmentProperties" ToRole="MES_MSProperties" />
+          <NavigationProperty Name="MES_MSPropertyValues" Relationship="MESModel.FK_MES_MSEquipmentProperties_MES_MSPropertyValues" FromRole="MES_MSEquipmentProperties" ToRole="MES_MSPropertyValues" />
+          <NavigationProperty Name="MES_MSTestedEquipmentProperties" Relationship="MESModel.FK_MES_MSTestedEquipmentProperties_MES_MSEquipmentProperties" FromRole="MES_MSEquipmentProperties" ToRole="MES_MSTestedEquipmentProperties" />
+        </EntityType>
+        <EntityType Name="MES_MSEquipments">
+          <Key>
+            <PropertyRef Name="equipmentId" />
+          </Key>
+          <Property Name="equipmentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="64" Unicode="false" FixedLength="false" />
+          <Property Name="description" Type="String" Nullable="false" MaxLength="256" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="MES_MSEquipmentClassEquipments" Relationship="MESModel.FK_MES_MSEquipmentClassEquipments_MES_MSEquipments" FromRole="MES_MSEquipments" ToRole="MES_MSEquipmentClassEquipments" />
+          <NavigationProperty Name="MES_MSEquipmentProperties" Relationship="MESModel.FK_MES_MSEquipmentProperties_MES_MSEquipments" FromRole="MES_MSEquipments" ToRole="MES_MSEquipmentProperties" />
+          <NavigationProperty Name="MES_MSTestedEquipmentProperties" Relationship="MESModel.FK_MES_MSTestedEquipmentProperties_MES_MSEquipments" FromRole="MES_MSEquipments" ToRole="MES_MSTestedEquipmentProperties" />
+        </EntityType>
+        <EntityType Name="MES_MSProperties">
+          <Key>
+            <PropertyRef Name="propertyId" />
+          </Key>
+          <Property Name="propertyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="64" Unicode="false" FixedLength="false" />
+          <Property Name="descriptionId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="MES_MSEquipmentClassProperties" Relationship="MESModel.FK_MES_MSEquipmentClassProperties_MES_MSProperties" FromRole="MES_MSProperties" ToRole="MES_MSEquipmentClassProperties" />
+          <NavigationProperty Name="MES_MSEquipmentProperties" Relationship="MESModel.FK_MES_MSEquipmentProperties_MES_MSProperties" FromRole="MES_MSProperties" ToRole="MES_MSEquipmentProperties" />
+        </EntityType>
+        <EntityType Name="MES_MSPropertyValues">
+          <Key>
+            <PropertyRef Name="propertyValueId" />
+          </Key>
+          <Property Name="propertyValueId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="valueString" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="dataType" Type="String" Nullable="false" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="uomId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="MES_MSEquipmentClassProperties" Relationship="MESModel.FK_MES_MSEquipmentClassProperties_MES_MSPropertyValues" FromRole="MES_MSPropertyValues" ToRole="MES_MSEquipmentClassProperties" />
+          <NavigationProperty Name="MES_MSEquipmentProperties" Relationship="MESModel.FK_MES_MSEquipmentProperties_MES_MSPropertyValues" FromRole="MES_MSPropertyValues" ToRole="MES_MSEquipmentProperties" />
+        </EntityType>
+        <EntityType Name="MES_MSTestedEquipmentClassProperties">
+          <Key>
+            <PropertyRef Name="testedEquipmentClassPropertyId" />
+          </Key>
+          <Property Name="testedEquipmentClassPropertyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="equipmentClassId" Type="Int32" Nullable="false" />
+          <Property Name="equipmentClassPropertyId" Type="Int32" Nullable="false" />
+          <Property Name="equipmentCapabilitiyTestSpecificationId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="MES_MSEquipmentCapabilityTestSpecifications" Relationship="MESModel.FK_MES_MSTestedEquipmentClassProperties_MES_MSEquipmentCapabilityTestSpecifications" FromRole="MES_MSTestedEquipmentClassProperties" ToRole="MES_MSEquipmentCapabilityTestSpecifications" />
+          <NavigationProperty Name="MES_MSEquipmentClasses" Relationship="MESModel.FK_MES_MSTestedEquipmentClassProperties_MES_MSEquipmentClasses" FromRole="MES_MSTestedEquipmentClassProperties" ToRole="MES_MSEquipmentClasses" />
+          <NavigationProperty Name="MES_MSEquipmentClassProperties" Relationship="MESModel.FK_MES_MSTestedEquipmentClassProperties_MES_MSEquipmentClassProperties" FromRole="MES_MSTestedEquipmentClassProperties" ToRole="MES_MSEquipmentClassProperties" />
+        </EntityType>
+        <EntityType Name="MES_MSTestedEquipmentProperties">
+          <Key>
+            <PropertyRef Name="testedEquipmentPropertyId" />
+          </Key>
+          <Property Name="testedEquipmentPropertyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="equipmentId" Type="Int32" Nullable="false" />
+          <Property Name="equipmentPropertyId" Type="Int32" Nullable="false" />
+          <Property Name="equipmentCapabilitiyTestSpecificationId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="MES_MSEquipmentCapabilityTestSpecifications" Relationship="MESModel.FK_MES_MSTestedEquipmentProperties_MES_MSEquipmentCapabilityTestSpecifications" FromRole="MES_MSTestedEquipmentProperties" ToRole="MES_MSEquipmentCapabilityTestSpecifications" />
+          <NavigationProperty Name="MES_MSEquipmentProperties" Relationship="MESModel.FK_MES_MSTestedEquipmentProperties_MES_MSEquipmentProperties" FromRole="MES_MSTestedEquipmentProperties" ToRole="MES_MSEquipmentProperties" />
+          <NavigationProperty Name="MES_MSEquipments" Relationship="MESModel.FK_MES_MSTestedEquipmentProperties_MES_MSEquipments" FromRole="MES_MSTestedEquipmentProperties" ToRole="MES_MSEquipments" />
+        </EntityType>
+        <Association Name="FK_MES_MSTestedEquipmentClassProperties_MES_MSEquipmentCapabilityTestSpecifications">
+          <End Role="MES_MSEquipmentCapabilityTestSpecifications" Type="MESModel.MES_MSEquipmentCapabilityTestSpecifications" Multiplicity="1" />
+          <End Role="MES_MSTestedEquipmentClassProperties" Type="MESModel.MES_MSTestedEquipmentClassProperties" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MES_MSEquipmentCapabilityTestSpecifications">
+              <PropertyRef Name="equipmentCapabilitiyTestSpecificationId" />
+            </Principal>
+            <Dependent Role="MES_MSTestedEquipmentClassProperties">
+              <PropertyRef Name="equipmentCapabilitiyTestSpecificationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MES_MSTestedEquipmentProperties_MES_MSEquipmentCapabilityTestSpecifications">
+          <End Role="MES_MSEquipmentCapabilityTestSpecifications" Type="MESModel.MES_MSEquipmentCapabilityTestSpecifications" Multiplicity="1" />
+          <End Role="MES_MSTestedEquipmentProperties" Type="MESModel.MES_MSTestedEquipmentProperties" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MES_MSEquipmentCapabilityTestSpecifications">
+              <PropertyRef Name="equipmentCapabilitiyTestSpecificationId" />
+            </Principal>
+            <Dependent Role="MES_MSTestedEquipmentProperties">
+              <PropertyRef Name="equipmentCapabilitiyTestSpecificationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MES_MSEquipmentClassEquipments_MES_MSEquipmentClasses">
+          <End Role="MES_MSEquipmentClasses" Type="MESModel.MES_MSEquipmentClasses" Multiplicity="1" />
+          <End Role="MES_MSEquipmentClassEquipments" Type="MESModel.MES_MSEquipmentClassEquipments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MES_MSEquipmentClasses">
+              <PropertyRef Name="equipmentClassId" />
+            </Principal>
+            <Dependent Role="MES_MSEquipmentClassEquipments">
+              <PropertyRef Name="equipmentClassId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MES_MSEquipmentClassEquipments_MES_MSEquipments">
+          <End Role="MES_MSEquipments" Type="MESModel.MES_MSEquipments" Multiplicity="1" />
+          <End Role="MES_MSEquipmentClassEquipments" Type="MESModel.MES_MSEquipmentClassEquipments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MES_MSEquipments">
+              <PropertyRef Name="equipmentId" />
+            </Principal>
+            <Dependent Role="MES_MSEquipmentClassEquipments">
+              <PropertyRef Name="equipmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MES_MSEquipmentClasses_MES_MSEquipmentClasses">
+          <End Role="MES_MSEquipmentClasses" Type="MESModel.MES_MSEquipmentClasses" Multiplicity="0..1" />
+          <End Role="MES_MSEquipmentClasses1" Type="MESModel.MES_MSEquipmentClasses" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MES_MSEquipmentClasses">
+              <PropertyRef Name="equipmentClassId" />
+            </Principal>
+            <Dependent Role="MES_MSEquipmentClasses1">
+              <PropertyRef Name="equipmentClassBaseId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MES_MSEquipmentClassProperties_MES_MSEquipmentClasses">
+          <End Role="MES_MSEquipmentClasses" Type="MESModel.MES_MSEquipmentClasses" Multiplicity="1" />
+          <End Role="MES_MSEquipmentClassProperties" Type="MESModel.MES_MSEquipmentClassProperties" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MES_MSEquipmentClasses">
+              <PropertyRef Name="equipmentClassId" />
+            </Principal>
+            <Dependent Role="MES_MSEquipmentClassProperties">
+              <PropertyRef Name="equipmentClassId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MES_MSTestedEquipmentClassProperties_MES_MSEquipmentClasses">
+          <End Role="MES_MSEquipmentClasses" Type="MESModel.MES_MSEquipmentClasses" Multiplicity="1" />
+          <End Role="MES_MSTestedEquipmentClassProperties" Type="MESModel.MES_MSTestedEquipmentClassProperties" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MES_MSEquipmentClasses">
+              <PropertyRef Name="equipmentClassId" />
+            </Principal>
+            <Dependent Role="MES_MSTestedEquipmentClassProperties">
+              <PropertyRef Name="equipmentClassId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MES_MSEquipmentClassProperties_MES_MSProperties">
+          <End Role="MES_MSProperties" Type="MESModel.MES_MSProperties" Multiplicity="1" />
+          <End Role="MES_MSEquipmentClassProperties" Type="MESModel.MES_MSEquipmentClassProperties" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MES_MSProperties">
+              <PropertyRef Name="propertyId" />
+            </Principal>
+            <Dependent Role="MES_MSEquipmentClassProperties">
+              <PropertyRef Name="propertyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MES_MSEquipmentClassProperties_MES_MSPropertyValues">
+          <End Role="MES_MSPropertyValues" Type="MESModel.MES_MSPropertyValues" Multiplicity="1" />
+          <End Role="MES_MSEquipmentClassProperties" Type="MESModel.MES_MSEquipmentClassProperties" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MES_MSPropertyValues">
+              <PropertyRef Name="propertyValueId" />
+            </Principal>
+            <Dependent Role="MES_MSEquipmentClassProperties">
+              <PropertyRef Name="propertyValueId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MES_MSTestedEquipmentClassProperties_MES_MSEquipmentClassProperties">
+          <End Role="MES_MSEquipmentClassProperties" Type="MESModel.MES_MSEquipmentClassProperties" Multiplicity="1" />
+          <End Role="MES_MSTestedEquipmentClassProperties" Type="MESModel.MES_MSTestedEquipmentClassProperties" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MES_MSEquipmentClassProperties">
+              <PropertyRef Name="equipmentClassPropertyId" />
+            </Principal>
+            <Dependent Role="MES_MSTestedEquipmentClassProperties">
+              <PropertyRef Name="equipmentClassPropertyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MES_MSEquipmentProperties_MES_MSEquipments">
+          <End Role="MES_MSEquipments" Type="MESModel.MES_MSEquipments" Multiplicity="1" />
+          <End Role="MES_MSEquipmentProperties" Type="MESModel.MES_MSEquipmentProperties" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MES_MSEquipments">
+              <PropertyRef Name="equipmentId" />
+            </Principal>
+            <Dependent Role="MES_MSEquipmentProperties">
+              <PropertyRef Name="equipmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MES_MSEquipmentProperties_MES_MSProperties">
+          <End Role="MES_MSProperties" Type="MESModel.MES_MSProperties" Multiplicity="1" />
+          <End Role="MES_MSEquipmentProperties" Type="MESModel.MES_MSEquipmentProperties" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MES_MSProperties">
+              <PropertyRef Name="propertyId" />
+            </Principal>
+            <Dependent Role="MES_MSEquipmentProperties">
+              <PropertyRef Name="propertyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MES_MSEquipmentProperties_MES_MSPropertyValues">
+          <End Role="MES_MSPropertyValues" Type="MESModel.MES_MSPropertyValues" Multiplicity="1" />
+          <End Role="MES_MSEquipmentProperties" Type="MESModel.MES_MSEquipmentProperties" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MES_MSPropertyValues">
+              <PropertyRef Name="propertyValueId" />
+            </Principal>
+            <Dependent Role="MES_MSEquipmentProperties">
+              <PropertyRef Name="propertyValueId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MES_MSTestedEquipmentProperties_MES_MSEquipmentProperties">
+          <End Role="MES_MSEquipmentProperties" Type="MESModel.MES_MSEquipmentProperties" Multiplicity="1" />
+          <End Role="MES_MSTestedEquipmentProperties" Type="MESModel.MES_MSTestedEquipmentProperties" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MES_MSEquipmentProperties">
+              <PropertyRef Name="equipmentPropertyId" />
+            </Principal>
+            <Dependent Role="MES_MSTestedEquipmentProperties">
+              <PropertyRef Name="equipmentPropertyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MES_MSTestedEquipmentProperties_MES_MSEquipments">
+          <End Role="MES_MSEquipments" Type="MESModel.MES_MSEquipments" Multiplicity="1" />
+          <End Role="MES_MSTestedEquipmentProperties" Type="MESModel.MES_MSTestedEquipmentProperties" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MES_MSEquipments">
+              <PropertyRef Name="equipmentId" />
+            </Principal>
+            <Dependent Role="MES_MSTestedEquipmentProperties">
+              <PropertyRef Name="equipmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MESModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="MES_MSEquipmentCapabilityTestSpecifications">
+            <EntityTypeMapping TypeName="MESModel.MES_MSEquipmentCapabilityTestSpecifications">
+              <MappingFragment StoreEntitySet="MES_MSEquipmentCapabilityTestSpecifications">
+                <ScalarProperty Name="equipmentCapabilitiyTestSpecificationId" ColumnName="equipmentCapabilitiyTestSpecificationId" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="version" ColumnName="version" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MES_MSEquipmentClassEquipments">
+            <EntityTypeMapping TypeName="MESModel.MES_MSEquipmentClassEquipments">
+              <MappingFragment StoreEntitySet="MES_MSEquipmentClassEquipments">
+                <ScalarProperty Name="equipmentClassEquipmentsId" ColumnName="equipmentClassEquipmentsId" />
+                <ScalarProperty Name="equipmentClassId" ColumnName="equipmentClassId" />
+                <ScalarProperty Name="equipmentId" ColumnName="equipmentId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MES_MSEquipmentClasses">
+            <EntityTypeMapping TypeName="MESModel.MES_MSEquipmentClasses">
+              <MappingFragment StoreEntitySet="MES_MSEquipmentClasses">
+                <ScalarProperty Name="equipmentClassId" ColumnName="equipmentClassId" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="equipmentClassBaseId" ColumnName="equipmentClassBaseId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MES_MSEquipmentClassProperties">
+            <EntityTypeMapping TypeName="MESModel.MES_MSEquipmentClassProperties">
+              <MappingFragment StoreEntitySet="MES_MSEquipmentClassProperties">
+                <ScalarProperty Name="equipmentClassPropertyId" ColumnName="equipmentClassPropertyId" />
+                <ScalarProperty Name="equipmentClassId" ColumnName="equipmentClassId" />
+                <ScalarProperty Name="propertyId" ColumnName="propertyId" />
+                <ScalarProperty Name="propertyValueId" ColumnName="propertyValueId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MES_MSEquipmentProperties">
+            <EntityTypeMapping TypeName="MESModel.MES_MSEquipmentProperties">
+              <MappingFragment StoreEntitySet="MES_MSEquipmentProperties">
+                <ScalarProperty Name="equipmentPropertyId" ColumnName="equipmentPropertyId" />
+                <ScalarProperty Name="equipmentId" ColumnName="equipmentId" />
+                <ScalarProperty Name="propertyId" ColumnName="propertyId" />
+                <ScalarProperty Name="propertyValueId" ColumnName="propertyValueId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MES_MSEquipments">
+            <EntityTypeMapping TypeName="MESModel.MES_MSEquipments">
+              <MappingFragment StoreEntitySet="MES_MSEquipments">
+                <ScalarProperty Name="equipmentId" ColumnName="equipmentId" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="description" ColumnName="description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MES_MSProperties">
+            <EntityTypeMapping TypeName="MESModel.MES_MSProperties">
+              <MappingFragment StoreEntitySet="MES_MSProperties">
+                <ScalarProperty Name="propertyId" ColumnName="propertyId" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="descriptionId" ColumnName="descriptionId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MES_MSPropertyValues">
+            <EntityTypeMapping TypeName="MESModel.MES_MSPropertyValues">
+              <MappingFragment StoreEntitySet="MES_MSPropertyValues">
+                <ScalarProperty Name="propertyValueId" ColumnName="propertyValueId" />
+                <ScalarProperty Name="valueString" ColumnName="valueString" />
+                <ScalarProperty Name="dataType" ColumnName="dataType" />
+                <ScalarProperty Name="uomId" ColumnName="uomId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MES_MSTestedEquipmentClassProperties">
+            <EntityTypeMapping TypeName="MESModel.MES_MSTestedEquipmentClassProperties">
+              <MappingFragment StoreEntitySet="MES_MSTestedEquipmentClassProperties">
+                <ScalarProperty Name="testedEquipmentClassPropertyId" ColumnName="testedEquipmentClassPropertyId" />
+                <ScalarProperty Name="equipmentClassId" ColumnName="equipmentClassId" />
+                <ScalarProperty Name="equipmentClassPropertyId" ColumnName="equipmentClassPropertyId" />
+                <ScalarProperty Name="equipmentCapabilitiyTestSpecificationId" ColumnName="equipmentCapabilitiyTestSpecificationId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MES_MSTestedEquipmentProperties">
+            <EntityTypeMapping TypeName="MESModel.MES_MSTestedEquipmentProperties">
+              <MappingFragment StoreEntitySet="MES_MSTestedEquipmentProperties">
+                <ScalarProperty Name="testedEquipmentPropertyId" ColumnName="testedEquipmentPropertyId" />
+                <ScalarProperty Name="equipmentId" ColumnName="equipmentId" />
+                <ScalarProperty Name="equipmentPropertyId" ColumnName="equipmentPropertyId" />
+                <ScalarProperty Name="equipmentCapabilitiyTestSpecificationId" ColumnName="equipmentCapabilitiyTestSpecificationId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

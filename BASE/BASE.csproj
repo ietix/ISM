@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6DA24DD4-7D13-4646-AB8F-70794858AE24}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BASE</RootNamespace>
+    <AssemblyName>BASE</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\BASEModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BASEModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BASEModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BASEModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BASEModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BASEModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BASE_Cities.cs">
+      <DependentUpon>BASEModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BASE_Concepts.cs">
+      <DependentUpon>BASEModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BASE_Countries.cs">
+      <DependentUpon>BASEModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BASE_CurrencyTypes.cs">
+      <DependentUpon>BASEModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BASE_Descriptions.cs">
+      <DependentUpon>BASEModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BASE_DocumentTypes.cs">
+      <DependentUpon>BASEModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BASE_Languages.cs">
+      <DependentUpon>BASEModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BASE_PostalCodes.cs">
+      <DependentUpon>BASEModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BASE_Profiles.cs">
+      <DependentUpon>BASEModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BASE_ProfilesResources.cs">
+      <DependentUpon>BASEModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BASE_Provinces.cs">
+      <DependentUpon>BASEModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BASE_ReceiptTypes.cs">
+      <DependentUpon>BASEModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BASE_Resources.cs">
+      <DependentUpon>BASEModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BASE_Taxes.cs">
+      <DependentUpon>BASEModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BASE_Uom.cs">
+      <DependentUpon>BASEModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BASE_UserProfiles.cs">
+      <DependentUpon>BASEModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BASE_Users.cs">
+      <DependentUpon>BASEModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\City.cs" />
+    <Compile Include="Model\Concept.cs" />
+    <Compile Include="Model\Profile.cs" />
+    <Compile Include="Model\Uom.cs" />
+    <Compile Include="Model\Tax.cs" />
+    <Compile Include="Model\Country.cs" />
+    <Compile Include="Model\CurrencyType.cs" />
+    <Compile Include="Model\Description.cs" />
+    <Compile Include="Model\DocumentType.cs" />
+    <Compile Include="Model\Entity.cs" />
+    <Compile Include="Model\BASERepository.cs" />
+    <Compile Include="Model\Language.cs" />
+    <Compile Include="Model\PostalCode.cs" />
+    <Compile Include="Model\Province.cs" />
+    <Compile Include="Model\ReceiptType.cs" />
+    <Compile Include="Model\Resource.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model\BASEModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BASEModel.edmx</DependentUpon>
+      <LastGenOutput>BASEModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\BASEModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BASEModel.edmx</DependentUpon>
+      <LastGenOutput>BASEModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="Model\BASEModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BASEModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\BASEModel.edmx.diagram">
+      <DependentUpon>BASEModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

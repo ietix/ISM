@@ -46,68 +46,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Addresses.cs" />
-    <Compile Include="Model\AFIP_ConceptosIncluidos.cs">
-      <DependentUpon>ERPModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\AFIP_Iva.cs">
-      <DependentUpon>ERPModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\AFIP_TiposComprobante.cs">
-      <DependentUpon>ERPModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\AFIP_TiposDocumento.cs">
-      <DependentUpon>ERPModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\AFIP_TiposMonedas.cs">
-      <DependentUpon>ERPModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\AFIP_UnidadesMedida.cs">
-      <DependentUpon>ERPModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\BASE_Cities.cs">
-      <DependentUpon>ERPModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\BASE_Countries.cs">
-      <DependentUpon>ERPModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\BASE_Descriptions.cs">
-      <DependentUpon>ERPModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\BASE_Languages.cs">
-      <DependentUpon>ERPModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\BASE_PostalCodes.cs">
-      <DependentUpon>ERPModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\BASE_Profiles.cs">
-      <DependentUpon>ERPModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\BASE_ProfilesResources.cs">
-      <DependentUpon>ERPModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\BASE_Provinces.cs">
-      <DependentUpon>ERPModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\BASE_Resources.cs">
-      <DependentUpon>ERPModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\BASE_Uom.cs">
-      <DependentUpon>ERPModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\BASE_UserProfiles.cs">
-      <DependentUpon>ERPModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\BASE_Users.cs">
-      <DependentUpon>ERPModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Cities.cs" />
-    <Compile Include="Model\Contacts.cs" />
+    <Compile Include="Model\Address.cs" />
+    <Compile Include="Model\Article.cs" />
+    <Compile Include="Model\BankAccount.cs" />
+    <Compile Include="Model\Brand.cs" />
+    <Compile Include="Model\Contact.cs" />
     <Compile Include="Model\ContactType.cs" />
-    <Compile Include="Model\Countries.cs" />
-    <Compile Include="Model\Descriptions.cs" />
-    <Compile Include="Model\Clients.cs" />
-    <Compile Include="Model\Entity.cs" />
+    <Compile Include="Model\Bank.cs" />
+    <Compile Include="Model\Company.cs" />
+    <Compile Include="Model\Contract.cs" />
+    <Compile Include="Model\SalesOrder.cs" />
+    <Compile Include="Model\SalesOrderState.cs" />
+    <Compile Include="Model\ShippingNote.cs" />
+    <Compile Include="Model\Supplier.cs" />
+    <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\ERPModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -130,7 +82,7 @@
     <Compile Include="Model\ERP_Articles.cs">
       <DependentUpon>ERPModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\ERP_ArticlesClient.cs">
+    <Compile Include="Model\ERP_ArticlesCustomer.cs">
       <DependentUpon>ERPModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\ERP_ArticlesSupplier.cs">
@@ -142,16 +94,7 @@
     <Compile Include="Model\ERP_BankAccounts.cs">
       <DependentUpon>ERPModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\ERP_BankRelations.cs">
-      <DependentUpon>ERPModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Model\ERP_Banks.cs">
-      <DependentUpon>ERPModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\ERP_Clients.cs">
-      <DependentUpon>ERPModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\ERP_Companies.cs">
       <DependentUpon>ERPModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\ERP_Contacts.cs">
@@ -187,6 +130,12 @@
     <Compile Include="Model\ERP_PaymentTypes.cs">
       <DependentUpon>ERPModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\ERP_Persons.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ERP_PersonTypes.cs">
+      <DependentUpon>ERPModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\ERP_PointsOfSales.cs">
       <DependentUpon>ERPModel.tt</DependentUpon>
     </Compile>
@@ -211,34 +160,33 @@
     <Compile Include="Model\ERP_ShippingNoteStates.cs">
       <DependentUpon>ERPModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\ERP_Suppliers.cs">
-      <DependentUpon>ERPModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Language.cs" />
-    <Compile Include="Model\Provinces.cs" />
-    <Compile Include="Model\RPT_Reports.cs">
-      <DependentUpon>ERPModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\RPT_ReportsPointOfSales.cs">
-      <DependentUpon>ERPModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Model\Subject.cs" />
-    <Compile Include="Model\TipoDeDocumento.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
+    <Folder Include="Mappings\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
     <EntityDeploy Include="Model\ERPModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ERPModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.Config" />
     <None Include="Model\ERPModel.edmx.diagram">
       <DependentUpon>ERPModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BASE\BASE.csproj">
+      <Project>{6da24dd4-7d13-4646-ab8f-70794858ae24}</Project>
+      <Name>BASE</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Model\ERPModel.Context.tt">
@@ -251,9 +199,6 @@
       <DependentUpon>ERPModel.edmx</DependentUpon>
       <LastGenOutput>ERPModel.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

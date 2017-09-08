@@ -29,9 +29,8 @@ namespace ERP.Model
         public System.DateTime creditNoteDate { get; set; }
         public string cae { get; set; }
         public Nullable<System.DateTime> dueDate { get; set; }
-        public int codigoTipoComprobante { get; set; }
+        public int receiptTypeId { get; set; }
     
-        public virtual AFIP_TiposComprobante AFIP_TiposComprobante { get; set; }
         public virtual ERP_PointsOfSales ERP_PointsOfSales { get; set; }
         public virtual ICollection<ERP_ItemsCreditNote> ERP_ItemsCreditNote { get; set; }
         public virtual ERP_Invoices ERP_Invoices { get; set; }

@@ -21,14 +21,13 @@ namespace ERP.Model
         }
     
         public int contractId { get; set; }
-        public int clientId { get; set; }
+        public int personId { get; set; }
+        public int personTypeId { get; set; }
         public System.DateTime startTime { get; set; }
         public System.DateTime endTime { get; set; }
-        public int descriptionId { get; set; }
+        public int tableKeyId { get; set; }
         public string clientBuyerName { get; set; }
     
-        public virtual BASE_Descriptions BASE_Descriptions { get; set; }
-        public virtual ERP_Clients ERP_Clients { get; set; }
         public virtual ICollection<ERP_ItemsContract> ERP_ItemsContract { get; set; }
         public virtual ICollection<ERP_SalesOrder> ERP_SalesOrder { get; set; }
     }

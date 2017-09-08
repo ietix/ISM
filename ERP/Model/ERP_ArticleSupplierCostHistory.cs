@@ -21,7 +21,6 @@ namespace ERP.Model
         public int articleSupplierId { get; set; }
         public int codigoTipoMoneda { get; set; }
     
-        public virtual AFIP_TiposMonedas AFIP_TiposMonedas { get; set; }
         public virtual ERP_ArticlesSupplier ERP_ArticlesSupplier { get; set; }
     }
 }

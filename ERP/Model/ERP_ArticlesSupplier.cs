@@ -23,9 +23,9 @@ namespace ERP.Model
         public int articleSupplierId { get; set; }
         public int articleId { get; set; }
         public int supplierId { get; set; }
+        public int personTypeId { get; set; }
     
         public virtual ERP_Articles ERP_Articles { get; set; }
-        public virtual ERP_Suppliers ERP_Suppliers { get; set; }
         public virtual ICollection<ERP_ArticleSupplierCostHistory> ERP_ArticleSupplierCostHistory { get; set; }
         public virtual ICollection<ERP_ItemsShippingNote> ERP_ItemsShippingNote { get; set; }
     }

@@ -16,16 +16,12 @@ namespace ERP.Model
     {
         public int bankAccountId { get; set; }
         public int bankId { get; set; }
-        public Nullable<int> clientId { get; set; }
-        public Nullable<int> supplierId { get; set; }
-        public Nullable<int> companyId { get; set; }
+        public int personId { get; set; }
+        public int personTypeId { get; set; }
         public string cbu { get; set; }
         public string accountNumber { get; set; }
         public string cbuAlias { get; set; }
     
         public virtual ERP_Banks ERP_Banks { get; set; }
-        public virtual ERP_Clients ERP_Clients { get; set; }
-        public virtual ERP_Companies ERP_Companies { get; set; }
-        public virtual ERP_Suppliers ERP_Suppliers { get; set; }
     }
 }

@@ -17,11 +17,9 @@ namespace ERP.Model
         public int contactId { get; set; }
         public int contactTypeId { get; set; }
         public string information { get; set; }
-        public Nullable<int> clientId { get; set; }
-        public Nullable<int> supplierId { get; set; }
+        public int personId { get; set; }
+        public int personTypeId { get; set; }
     
-        public virtual ERP_Clients ERP_Clients { get; set; }
         public virtual ERP_ContactTypes ERP_ContactTypes { get; set; }
-        public virtual ERP_Suppliers ERP_Suppliers { get; set; }
     }
 }

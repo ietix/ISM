@@ -16,7 +16,7 @@ namespace ERP.Model
     public partial class IMS : DbContext
     {
         public IMS()
-            : base("name=IMS")
+            : base("name=Entities")
         {
         }
     
@@ -25,34 +25,13 @@ namespace ERP.Model
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<AFIP_ConceptosIncluidos> AFIP_ConceptosIncluidos { get; set; }
-        public DbSet<AFIP_Iva> AFIP_Iva { get; set; }
-        public DbSet<AFIP_TiposComprobante> AFIP_TiposComprobante { get; set; }
-        public DbSet<AFIP_TiposDocumento> AFIP_TiposDocumento { get; set; }
-        public DbSet<AFIP_TiposMonedas> AFIP_TiposMonedas { get; set; }
-        public DbSet<AFIP_UnidadesMedida> AFIP_UnidadesMedida { get; set; }
-        public DbSet<BASE_Cities> BASE_Cities { get; set; }
-        public DbSet<BASE_Countries> BASE_Countries { get; set; }
-        public DbSet<BASE_Descriptions> BASE_Descriptions { get; set; }
-        public DbSet<BASE_Languages> BASE_Languages { get; set; }
-        public DbSet<BASE_PostalCodes> BASE_PostalCodes { get; set; }
-        public DbSet<BASE_Profiles> BASE_Profiles { get; set; }
-        public DbSet<BASE_ProfilesResources> BASE_ProfilesResources { get; set; }
-        public DbSet<BASE_Provinces> BASE_Provinces { get; set; }
-        public DbSet<BASE_Resources> BASE_Resources { get; set; }
-        public DbSet<BASE_Uom> BASE_Uom { get; set; }
-        public DbSet<BASE_UserProfiles> BASE_UserProfiles { get; set; }
-        public DbSet<BASE_Users> BASE_Users { get; set; }
         public DbSet<ERP_Addresses> ERP_Addresses { get; set; }
         public DbSet<ERP_Articles> ERP_Articles { get; set; }
-        public DbSet<ERP_ArticlesClient> ERP_ArticlesClient { get; set; }
+        public DbSet<ERP_ArticlesCustomer> ERP_ArticlesCustomer { get; set; }
         public DbSet<ERP_ArticlesSupplier> ERP_ArticlesSupplier { get; set; }
         public DbSet<ERP_ArticleSupplierCostHistory> ERP_ArticleSupplierCostHistory { get; set; }
         public DbSet<ERP_BankAccounts> ERP_BankAccounts { get; set; }
-        public DbSet<ERP_BankRelations> ERP_BankRelations { get; set; }
         public DbSet<ERP_Banks> ERP_Banks { get; set; }
-        public DbSet<ERP_Clients> ERP_Clients { get; set; }
-        public DbSet<ERP_Companies> ERP_Companies { get; set; }
         public DbSet<ERP_Contacts> ERP_Contacts { get; set; }
         public DbSet<ERP_ContactTypes> ERP_ContactTypes { get; set; }
         public DbSet<ERP_Contracts> ERP_Contracts { get; set; }
@@ -64,6 +43,8 @@ namespace ERP.Model
         public DbSet<ERP_ItemsShippingNote> ERP_ItemsShippingNote { get; set; }
         public DbSet<ERP_Payments> ERP_Payments { get; set; }
         public DbSet<ERP_PaymentTypes> ERP_PaymentTypes { get; set; }
+        public DbSet<ERP_Persons> ERP_Persons { get; set; }
+        public DbSet<ERP_PersonTypes> ERP_PersonTypes { get; set; }
         public DbSet<ERP_PointsOfSales> ERP_PointsOfSales { get; set; }
         public DbSet<ERP_PriceArticlesHistory> ERP_PriceArticlesHistory { get; set; }
         public DbSet<ERP_SalesConditions> ERP_SalesConditions { get; set; }
@@ -72,8 +53,5 @@ namespace ERP.Model
         public DbSet<ERP_ShippingNote> ERP_ShippingNote { get; set; }
         public DbSet<ERP_ShippingNotesInvoices> ERP_ShippingNotesInvoices { get; set; }
         public DbSet<ERP_ShippingNoteStates> ERP_ShippingNoteStates { get; set; }
-        public DbSet<ERP_Suppliers> ERP_Suppliers { get; set; }
-        public DbSet<RPT_Reports> RPT_Reports { get; set; }
-        public DbSet<RPT_ReportsPointOfSales> RPT_ReportsPointOfSales { get; set; }
     }
 }

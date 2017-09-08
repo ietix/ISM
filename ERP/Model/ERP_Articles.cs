@@ -16,7 +16,7 @@ namespace ERP.Model
     {
         public ERP_Articles()
         {
-            this.ERP_ArticlesClient = new HashSet<ERP_ArticlesClient>();
+            this.ERP_ArticlesCustomer = new HashSet<ERP_ArticlesCustomer>();
             this.ERP_ArticlesSupplier = new HashSet<ERP_ArticlesSupplier>();
             this.ERP_PriceArticlesHistory = new HashSet<ERP_PriceArticlesHistory>();
             this.ERP_ItemsContract = new HashSet<ERP_ItemsContract>();
@@ -30,8 +30,7 @@ namespace ERP.Model
         public string imagePath { get; set; }
         public int uomId { get; set; }
     
-        public virtual AFIP_UnidadesMedida AFIP_UnidadesMedida { get; set; }
-        public virtual ICollection<ERP_ArticlesClient> ERP_ArticlesClient { get; set; }
+        public virtual ICollection<ERP_ArticlesCustomer> ERP_ArticlesCustomer { get; set; }
         public virtual ICollection<ERP_ArticlesSupplier> ERP_ArticlesSupplier { get; set; }
         public virtual ICollection<ERP_PriceArticlesHistory> ERP_PriceArticlesHistory { get; set; }
         public virtual ICollection<ERP_ItemsContract> ERP_ItemsContract { get; set; }

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c652a3d238ec4e7cafb767ccedf53c75" Name="Diagram1">
+        <EntityTypeShape EntityType="BASEModel.BASE_Cities" Width="1.5" PointX="10.25" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BASEModel.BASE_Concepts" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BASEModel.BASE_Countries" Width="1.5" PointX="5.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BASEModel.BASE_CurrencyTypes" Width="1.5" PointX="5.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BASEModel.BASE_Descriptions" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="BASEModel.BASE_DocumentTypes" Width="1.5" PointX="7.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BASEModel.BASE_Languages" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BASEModel.BASE_PostalCodes" Width="1.5" PointX="12.5" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BASEModel.BASE_Profiles" Width="1.5" PointX="0.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BASEModel.BASE_ProfilesResources" Width="1.5" PointX="3" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BASEModel.BASE_Provinces" Width="1.5" PointX="8" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BASEModel.BASE_ReceiptTypes" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BASEModel.BASE_Resources" Width="1.5" PointX="0.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BASEModel.BASE_Taxes" Width="1.5" PointX="9.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BASEModel.BASE_Uom" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BASEModel.BASE_UserProfiles" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BASEModel.BASE_Users" Width="1.5" PointX="0.75" PointY="12.375" IsExpanded="true" />
+        <AssociationConnector Association="BASEModel.FK_BASE_Cities_BASE_Provinces" ManuallyRouted="false" />
+        <AssociationConnector Association="BASEModel.FK_BASE_PostalCodes_BASE_Cities" ManuallyRouted="false" />
+        <AssociationConnector Association="BASEModel.FK_BASE_Provinces_BASE_Countries" ManuallyRouted="false" />
+        <AssociationConnector Association="BASEModel.FK_BASE_Descriptions_BASE_Descriptions1" ManuallyRouted="false" />
+        <AssociationConnector Association="BASEModel.FK_BASE_Descriptions_BASE_Languages" ManuallyRouted="false" />
+        <AssociationConnector Association="BASEModel.FK_BASE_PerfilesPorRecurso_BASE_Perfiles" ManuallyRouted="false" />
+        <AssociationConnector Association="BASEModel.FK_BASE_UsuariosPorPerfiles_BASE_Perfiles" ManuallyRouted="false" />
+        <AssociationConnector Association="BASEModel.FK_BASE_PerfilesPorRecurso_BASE_Recursos" ManuallyRouted="false" />
+        <AssociationConnector Association="BASEModel.FK_BASE_UnidadesDeMedida_BASE_UnidadesDeMedida" ManuallyRouted="false" />
+        <AssociationConnector Association="BASEModel.FK_BASE_UsuariosPorPerfiles_BASE_Usuarios" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

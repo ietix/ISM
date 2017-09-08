@@ -21,9 +21,8 @@ namespace ERP.Model
     
         public int shippingNoteStateId { get; set; }
         public string name { get; set; }
-        public int descriptionId { get; set; }
+        public int tableKeyId { get; set; }
     
-        public virtual BASE_Descriptions BASE_Descriptions { get; set; }
         public virtual ICollection<ERP_ShippingNote> ERP_ShippingNote { get; set; }
     }
 }

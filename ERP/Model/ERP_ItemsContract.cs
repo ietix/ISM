@@ -19,9 +19,8 @@ namespace ERP.Model
         public int articleId { get; set; }
         public decimal price { get; set; }
         public int position { get; set; }
-        public int codigoTipoMoneda { get; set; }
+        public int currencyTypeId { get; set; }
     
-        public virtual AFIP_TiposMonedas AFIP_TiposMonedas { get; set; }
         public virtual ERP_Articles ERP_Articles { get; set; }
         public virtual ERP_Contracts ERP_Contracts { get; set; }
     }

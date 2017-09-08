@@ -19,9 +19,8 @@ namespace ERP.Model
         public Nullable<System.DateTime> endDate { get; set; }
         public decimal price { get; set; }
         public int articleId { get; set; }
-        public int codigoTipoMoneda { get; set; }
+        public int receiptTypeId { get; set; }
     
-        public virtual AFIP_TiposMonedas AFIP_TiposMonedas { get; set; }
         public virtual ERP_Articles ERP_Articles { get; set; }
     }
 }

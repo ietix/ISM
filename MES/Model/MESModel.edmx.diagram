@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c76d3e24de014821ba528ccdea9cc483" Name="Diagram1">
+        <EntityTypeShape EntityType="MESModel.MES_MSEquipmentCapabilityTestSpecifications" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MESModel.MES_MSEquipmentClassEquipments" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="MESModel.MES_MSEquipmentClasses" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MESModel.MES_MSEquipmentClassProperties" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MESModel.MES_MSEquipmentProperties" Width="1.5" PointX="3" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MESModel.MES_MSEquipments" Width="1.5" PointX="0.75" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="MESModel.MES_MSProperties" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MESModel.MES_MSPropertyValues" Width="1.5" PointX="0.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MESModel.MES_MSTestedEquipmentClassProperties" Width="1.5" PointX="5.25" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MESModel.MES_MSTestedEquipmentProperties" Width="1.5" PointX="5.25" PointY="10.625" IsExpanded="true" />
+        <AssociationConnector Association="MESModel.FK_MES_MSTestedEquipmentClassProperties_MES_MSEquipmentCapabilityTestSpecifications" ManuallyRouted="false" />
+        <AssociationConnector Association="MESModel.FK_MES_MSTestedEquipmentProperties_MES_MSEquipmentCapabilityTestSpecifications" ManuallyRouted="false" />
+        <AssociationConnector Association="MESModel.FK_MES_MSEquipmentClassEquipments_MES_MSEquipmentClasses" ManuallyRouted="false" />
+        <AssociationConnector Association="MESModel.FK_MES_MSEquipmentClassEquipments_MES_MSEquipments" ManuallyRouted="false" />
+        <AssociationConnector Association="MESModel.FK_MES_MSEquipmentClasses_MES_MSEquipmentClasses" ManuallyRouted="false" />
+        <AssociationConnector Association="MESModel.FK_MES_MSEquipmentClassProperties_MES_MSEquipmentClasses" ManuallyRouted="false" />
+        <AssociationConnector Association="MESModel.FK_MES_MSTestedEquipmentClassProperties_MES_MSEquipmentClasses" ManuallyRouted="false" />
+        <AssociationConnector Association="MESModel.FK_MES_MSEquipmentClassProperties_MES_MSProperties" ManuallyRouted="false" />
+        <AssociationConnector Association="MESModel.FK_MES_MSEquipmentClassProperties_MES_MSPropertyValues" ManuallyRouted="false" />
+        <AssociationConnector Association="MESModel.FK_MES_MSTestedEquipmentClassProperties_MES_MSEquipmentClassProperties" ManuallyRouted="false" />
+        <AssociationConnector Association="MESModel.FK_MES_MSEquipmentProperties_MES_MSEquipments" ManuallyRouted="false" />
+        <AssociationConnector Association="MESModel.FK_MES_MSEquipmentProperties_MES_MSProperties" ManuallyRouted="false" />
+        <AssociationConnector Association="MESModel.FK_MES_MSEquipmentProperties_MES_MSPropertyValues" ManuallyRouted="false" />
+        <AssociationConnector Association="MESModel.FK_MES_MSTestedEquipmentProperties_MES_MSEquipmentProperties" ManuallyRouted="false" />
+        <AssociationConnector Association="MESModel.FK_MES_MSTestedEquipmentProperties_MES_MSEquipments" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

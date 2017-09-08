@@ -1,0 +1,874 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="BASEModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="BASEModelStoreContainer">
+          <EntitySet Name="BASE_Cities" EntityType="BASEModel.Store.BASE_Cities" store:Type="Tables" Schema="dbo" Table="BASE.Cities" />
+          <EntitySet Name="BASE_Concepts" EntityType="BASEModel.Store.BASE_Concepts" store:Type="Tables" Schema="dbo" Table="BASE.Concepts" />
+          <EntitySet Name="BASE_Countries" EntityType="BASEModel.Store.BASE_Countries" store:Type="Tables" Schema="dbo" Table="BASE.Countries" />
+          <EntitySet Name="BASE_CurrencyTypes" EntityType="BASEModel.Store.BASE_CurrencyTypes" store:Type="Tables" Schema="dbo" Table="BASE.CurrencyTypes" />
+          <EntitySet Name="BASE_Descriptions" EntityType="BASEModel.Store.BASE_Descriptions" store:Type="Tables" Schema="dbo" Table="BASE.Descriptions" />
+          <EntitySet Name="BASE_DocumentTypes" EntityType="BASEModel.Store.BASE_DocumentTypes" store:Type="Tables" Schema="dbo" Table="BASE.DocumentTypes" />
+          <EntitySet Name="BASE_Languages" EntityType="BASEModel.Store.BASE_Languages" store:Type="Tables" Schema="dbo" Table="BASE.Languages" />
+          <EntitySet Name="BASE_PostalCodes" EntityType="BASEModel.Store.BASE_PostalCodes" store:Type="Tables" Schema="dbo" Table="BASE.PostalCodes" />
+          <EntitySet Name="BASE_Profiles" EntityType="BASEModel.Store.BASE_Profiles" store:Type="Tables" Schema="dbo" Table="BASE.Profiles" />
+          <EntitySet Name="BASE_ProfilesResources" EntityType="BASEModel.Store.BASE_ProfilesResources" store:Type="Tables" Schema="dbo" Table="BASE.ProfilesResources" />
+          <EntitySet Name="BASE_Provinces" EntityType="BASEModel.Store.BASE_Provinces" store:Type="Tables" Schema="dbo" Table="BASE.Provinces" />
+          <EntitySet Name="BASE_ReceiptTypes" EntityType="BASEModel.Store.BASE_ReceiptTypes" store:Type="Tables" Schema="dbo" Table="BASE.ReceiptTypes" />
+          <EntitySet Name="BASE_Resources" EntityType="BASEModel.Store.BASE_Resources" store:Type="Tables" Schema="dbo" Table="BASE.Resources" />
+          <EntitySet Name="BASE_Taxes" EntityType="BASEModel.Store.BASE_Taxes" store:Type="Tables" Schema="dbo" Table="BASE.Taxes" />
+          <EntitySet Name="BASE_Uom" EntityType="BASEModel.Store.BASE_Uom" store:Type="Tables" Schema="dbo" Table="BASE.Uom" />
+          <EntitySet Name="BASE_UserProfiles" EntityType="BASEModel.Store.BASE_UserProfiles" store:Type="Tables" Schema="dbo" Table="BASE.UserProfiles" />
+          <EntitySet Name="BASE_Users" EntityType="BASEModel.Store.BASE_Users" store:Type="Tables" Schema="dbo" Table="BASE.Users" />
+          <AssociationSet Name="FK_BASE_Cities_BASE_Provinces" Association="BASEModel.Store.FK_BASE_Cities_BASE_Provinces">
+            <End Role="BASE_Provinces" EntitySet="BASE_Provinces" />
+            <End Role="BASE_Cities" EntitySet="BASE_Cities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BASE_Descriptions_BASE_Descriptions1" Association="BASEModel.Store.FK_BASE_Descriptions_BASE_Descriptions1">
+            <End Role="BASE_Descriptions" EntitySet="BASE_Descriptions" />
+            <End Role="BASE_Descriptions1" EntitySet="BASE_Descriptions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BASE_Descriptions_BASE_Languages" Association="BASEModel.Store.FK_BASE_Descriptions_BASE_Languages">
+            <End Role="BASE_Languages" EntitySet="BASE_Languages" />
+            <End Role="BASE_Descriptions" EntitySet="BASE_Descriptions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BASE_PerfilesPorRecurso_BASE_Perfiles" Association="BASEModel.Store.FK_BASE_PerfilesPorRecurso_BASE_Perfiles">
+            <End Role="BASE_Profiles" EntitySet="BASE_Profiles" />
+            <End Role="BASE_ProfilesResources" EntitySet="BASE_ProfilesResources" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BASE_PerfilesPorRecurso_BASE_Recursos" Association="BASEModel.Store.FK_BASE_PerfilesPorRecurso_BASE_Recursos">
+            <End Role="BASE_Resources" EntitySet="BASE_Resources" />
+            <End Role="BASE_ProfilesResources" EntitySet="BASE_ProfilesResources" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BASE_PostalCodes_BASE_Cities" Association="BASEModel.Store.FK_BASE_PostalCodes_BASE_Cities">
+            <End Role="BASE_Cities" EntitySet="BASE_Cities" />
+            <End Role="BASE_PostalCodes" EntitySet="BASE_PostalCodes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BASE_Provinces_BASE_Countries" Association="BASEModel.Store.FK_BASE_Provinces_BASE_Countries">
+            <End Role="BASE_Countries" EntitySet="BASE_Countries" />
+            <End Role="BASE_Provinces" EntitySet="BASE_Provinces" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BASE_UnidadesDeMedida_BASE_UnidadesDeMedida" Association="BASEModel.Store.FK_BASE_UnidadesDeMedida_BASE_UnidadesDeMedida">
+            <End Role="BASE_Uom" EntitySet="BASE_Uom" />
+            <End Role="BASE_Uom1" EntitySet="BASE_Uom" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BASE_UsuariosPorPerfiles_BASE_Perfiles" Association="BASEModel.Store.FK_BASE_UsuariosPorPerfiles_BASE_Perfiles">
+            <End Role="BASE_Profiles" EntitySet="BASE_Profiles" />
+            <End Role="BASE_UserProfiles" EntitySet="BASE_UserProfiles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BASE_UsuariosPorPerfiles_BASE_Usuarios" Association="BASEModel.Store.FK_BASE_UsuariosPorPerfiles_BASE_Usuarios">
+            <End Role="BASE_Users" EntitySet="BASE_Users" />
+            <End Role="BASE_UserProfiles" EntitySet="BASE_UserProfiles" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="BASE_Cities">
+          <Key>
+            <PropertyRef Name="cityId" />
+          </Key>
+          <Property Name="cityId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="tableKeyId" Type="int" Nullable="false" />
+          <Property Name="provinceId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BASE_Concepts">
+          <Key>
+            <PropertyRef Name="conceptId" />
+          </Key>
+          <Property Name="conceptId" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="tableKeyId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BASE_Countries">
+          <Key>
+            <PropertyRef Name="countryId" />
+          </Key>
+          <Property Name="countryId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="tableKeyId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BASE_CurrencyTypes">
+          <Key>
+            <PropertyRef Name="currencyTypeId" />
+          </Key>
+          <Property Name="currencyTypeId" Type="int" Nullable="false" />
+          <Property Name="fiscalCurrencyTypeId" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="tableKeyId" Type="int" Nullable="false" />
+          <Property Name="abreviation" Type="varchar" MaxLength="64" />
+        </EntityType>
+        <EntityType Name="BASE_Descriptions">
+          <Key>
+            <PropertyRef Name="descriptionId" />
+          </Key>
+          <Property Name="descriptionId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="languageId" Type="int" Nullable="false" />
+          <Property Name="entityId" Type="int" Nullable="false" />
+          <Property Name="tableKeyId" Type="int" Nullable="false" />
+          <Property Name="descriptionText" Type="varchar" Nullable="false" MaxLength="512" />
+        </EntityType>
+        <EntityType Name="BASE_DocumentTypes">
+          <Key>
+            <PropertyRef Name="documentTypeId" />
+          </Key>
+          <Property Name="documentTypeId" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="tableKeyId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BASE_Languages">
+          <Key>
+            <PropertyRef Name="languageId" />
+          </Key>
+          <Property Name="languageId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="shortName" Type="varchar" Nullable="false" MaxLength="16" />
+        </EntityType>
+        <EntityType Name="BASE_PostalCodes">
+          <Key>
+            <PropertyRef Name="postalCodeId" />
+          </Key>
+          <Property Name="postalCodeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="cpNumber" Type="varchar" Nullable="false" MaxLength="32" />
+          <Property Name="cityId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BASE_Profiles">
+          <Key>
+            <PropertyRef Name="profileId" />
+          </Key>
+          <Property Name="profileId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="tableKeyId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BASE_ProfilesResources">
+          <Key>
+            <PropertyRef Name="profileResourcesId" />
+          </Key>
+          <Property Name="profileResourcesId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="profileId" Type="int" Nullable="false" />
+          <Property Name="resourceId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BASE_Provinces">
+          <Key>
+            <PropertyRef Name="provinceId" />
+          </Key>
+          <Property Name="provinceId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="tableKeyId" Type="int" Nullable="false" />
+          <Property Name="countryId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BASE_ReceiptTypes">
+          <Key>
+            <PropertyRef Name="receiptTypeId" />
+          </Key>
+          <Property Name="receiptTypeId" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="tableKeyId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BASE_Resources">
+          <Key>
+            <PropertyRef Name="resourceId" />
+          </Key>
+          <Property Name="resourceId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="tableKeyId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BASE_Taxes">
+          <Key>
+            <PropertyRef Name="taxId" />
+          </Key>
+          <Property Name="taxId" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="tableKeyId" Type="int" Nullable="false" />
+          <Property Name="rate" Type="decimal" Nullable="false" Precision="9" Scale="2" />
+        </EntityType>
+        <EntityType Name="BASE_Uom">
+          <Key>
+            <PropertyRef Name="uomId" />
+          </Key>
+          <Property Name="uomId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="tableKeyId" Type="int" Nullable="false" />
+          <Property Name="shortName" Type="varchar" Nullable="false" MaxLength="64" />
+          <Property Name="baseUnitId" Type="int" />
+          <Property Name="baseUnitYield" Type="numeric" Precision="9" Scale="6" />
+        </EntityType>
+        <EntityType Name="BASE_UserProfiles">
+          <Key>
+            <PropertyRef Name="userProfilesId" />
+          </Key>
+          <Property Name="userProfilesId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="userId" Type="int" Nullable="false" />
+          <Property Name="profileId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BASE_Users">
+          <Key>
+            <PropertyRef Name="userId" />
+          </Key>
+          <Property Name="userId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="128" />
+          <Property Name="password" Type="varchar" Nullable="false" MaxLength="512" />
+          <Property Name="adValidation" Type="bit" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_BASE_Cities_BASE_Provinces">
+          <End Role="BASE_Provinces" Type="BASEModel.Store.BASE_Provinces" Multiplicity="1" />
+          <End Role="BASE_Cities" Type="BASEModel.Store.BASE_Cities" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BASE_Provinces">
+              <PropertyRef Name="provinceId" />
+            </Principal>
+            <Dependent Role="BASE_Cities">
+              <PropertyRef Name="provinceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BASE_Descriptions_BASE_Descriptions1">
+          <End Role="BASE_Descriptions" Type="BASEModel.Store.BASE_Descriptions" Multiplicity="1" />
+          <End Role="BASE_Descriptions1" Type="BASEModel.Store.BASE_Descriptions" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="BASE_Descriptions">
+              <PropertyRef Name="descriptionId" />
+            </Principal>
+            <Dependent Role="BASE_Descriptions1">
+              <PropertyRef Name="descriptionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BASE_Descriptions_BASE_Languages">
+          <End Role="BASE_Languages" Type="BASEModel.Store.BASE_Languages" Multiplicity="1" />
+          <End Role="BASE_Descriptions" Type="BASEModel.Store.BASE_Descriptions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BASE_Languages">
+              <PropertyRef Name="languageId" />
+            </Principal>
+            <Dependent Role="BASE_Descriptions">
+              <PropertyRef Name="languageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BASE_PerfilesPorRecurso_BASE_Perfiles">
+          <End Role="BASE_Profiles" Type="BASEModel.Store.BASE_Profiles" Multiplicity="1" />
+          <End Role="BASE_ProfilesResources" Type="BASEModel.Store.BASE_ProfilesResources" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BASE_Profiles">
+              <PropertyRef Name="profileId" />
+            </Principal>
+            <Dependent Role="BASE_ProfilesResources">
+              <PropertyRef Name="profileId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BASE_PerfilesPorRecurso_BASE_Recursos">
+          <End Role="BASE_Resources" Type="BASEModel.Store.BASE_Resources" Multiplicity="1" />
+          <End Role="BASE_ProfilesResources" Type="BASEModel.Store.BASE_ProfilesResources" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BASE_Resources">
+              <PropertyRef Name="resourceId" />
+            </Principal>
+            <Dependent Role="BASE_ProfilesResources">
+              <PropertyRef Name="resourceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BASE_PostalCodes_BASE_Cities">
+          <End Role="BASE_Cities" Type="BASEModel.Store.BASE_Cities" Multiplicity="1" />
+          <End Role="BASE_PostalCodes" Type="BASEModel.Store.BASE_PostalCodes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BASE_Cities">
+              <PropertyRef Name="cityId" />
+            </Principal>
+            <Dependent Role="BASE_PostalCodes">
+              <PropertyRef Name="cityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BASE_Provinces_BASE_Countries">
+          <End Role="BASE_Countries" Type="BASEModel.Store.BASE_Countries" Multiplicity="1" />
+          <End Role="BASE_Provinces" Type="BASEModel.Store.BASE_Provinces" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BASE_Countries">
+              <PropertyRef Name="countryId" />
+            </Principal>
+            <Dependent Role="BASE_Provinces">
+              <PropertyRef Name="countryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BASE_UnidadesDeMedida_BASE_UnidadesDeMedida">
+          <End Role="BASE_Uom" Type="BASEModel.Store.BASE_Uom" Multiplicity="0..1" />
+          <End Role="BASE_Uom1" Type="BASEModel.Store.BASE_Uom" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BASE_Uom">
+              <PropertyRef Name="uomId" />
+            </Principal>
+            <Dependent Role="BASE_Uom1">
+              <PropertyRef Name="baseUnitId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BASE_UsuariosPorPerfiles_BASE_Perfiles">
+          <End Role="BASE_Profiles" Type="BASEModel.Store.BASE_Profiles" Multiplicity="1" />
+          <End Role="BASE_UserProfiles" Type="BASEModel.Store.BASE_UserProfiles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BASE_Profiles">
+              <PropertyRef Name="profileId" />
+            </Principal>
+            <Dependent Role="BASE_UserProfiles">
+              <PropertyRef Name="profileId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BASE_UsuariosPorPerfiles_BASE_Usuarios">
+          <End Role="BASE_Users" Type="BASEModel.Store.BASE_Users" Multiplicity="1" />
+          <End Role="BASE_UserProfiles" Type="BASEModel.Store.BASE_UserProfiles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BASE_Users">
+              <PropertyRef Name="userId" />
+            </Principal>
+            <Dependent Role="BASE_UserProfiles">
+              <PropertyRef Name="userId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BASEModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="BASEEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BASE_Cities" EntityType="BASEModel.BASE_Cities" />
+          <EntitySet Name="BASE_Concepts" EntityType="BASEModel.BASE_Concepts" />
+          <EntitySet Name="BASE_Countries" EntityType="BASEModel.BASE_Countries" />
+          <EntitySet Name="BASE_CurrencyTypes" EntityType="BASEModel.BASE_CurrencyTypes" />
+          <EntitySet Name="BASE_Descriptions" EntityType="BASEModel.BASE_Descriptions" />
+          <EntitySet Name="BASE_DocumentTypes" EntityType="BASEModel.BASE_DocumentTypes" />
+          <EntitySet Name="BASE_Languages" EntityType="BASEModel.BASE_Languages" />
+          <EntitySet Name="BASE_PostalCodes" EntityType="BASEModel.BASE_PostalCodes" />
+          <EntitySet Name="BASE_Profiles" EntityType="BASEModel.BASE_Profiles" />
+          <EntitySet Name="BASE_ProfilesResources" EntityType="BASEModel.BASE_ProfilesResources" />
+          <EntitySet Name="BASE_Provinces" EntityType="BASEModel.BASE_Provinces" />
+          <EntitySet Name="BASE_ReceiptTypes" EntityType="BASEModel.BASE_ReceiptTypes" />
+          <EntitySet Name="BASE_Resources" EntityType="BASEModel.BASE_Resources" />
+          <EntitySet Name="BASE_Taxes" EntityType="BASEModel.BASE_Taxes" />
+          <EntitySet Name="BASE_Uom" EntityType="BASEModel.BASE_Uom" />
+          <EntitySet Name="BASE_UserProfiles" EntityType="BASEModel.BASE_UserProfiles" />
+          <EntitySet Name="BASE_Users" EntityType="BASEModel.BASE_Users" />
+          <AssociationSet Name="FK_BASE_Cities_BASE_Provinces" Association="BASEModel.FK_BASE_Cities_BASE_Provinces">
+            <End Role="BASE_Provinces" EntitySet="BASE_Provinces" />
+            <End Role="BASE_Cities" EntitySet="BASE_Cities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BASE_PostalCodes_BASE_Cities" Association="BASEModel.FK_BASE_PostalCodes_BASE_Cities">
+            <End Role="BASE_Cities" EntitySet="BASE_Cities" />
+            <End Role="BASE_PostalCodes" EntitySet="BASE_PostalCodes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BASE_Provinces_BASE_Countries" Association="BASEModel.FK_BASE_Provinces_BASE_Countries">
+            <End Role="BASE_Countries" EntitySet="BASE_Countries" />
+            <End Role="BASE_Provinces" EntitySet="BASE_Provinces" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BASE_Descriptions_BASE_Descriptions1" Association="BASEModel.FK_BASE_Descriptions_BASE_Descriptions1">
+            <End Role="BASE_Descriptions" EntitySet="BASE_Descriptions" />
+            <End Role="BASE_Descriptions1" EntitySet="BASE_Descriptions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BASE_Descriptions_BASE_Languages" Association="BASEModel.FK_BASE_Descriptions_BASE_Languages">
+            <End Role="BASE_Languages" EntitySet="BASE_Languages" />
+            <End Role="BASE_Descriptions" EntitySet="BASE_Descriptions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BASE_PerfilesPorRecurso_BASE_Perfiles" Association="BASEModel.FK_BASE_PerfilesPorRecurso_BASE_Perfiles">
+            <End Role="BASE_Profiles" EntitySet="BASE_Profiles" />
+            <End Role="BASE_ProfilesResources" EntitySet="BASE_ProfilesResources" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BASE_UsuariosPorPerfiles_BASE_Perfiles" Association="BASEModel.FK_BASE_UsuariosPorPerfiles_BASE_Perfiles">
+            <End Role="BASE_Profiles" EntitySet="BASE_Profiles" />
+            <End Role="BASE_UserProfiles" EntitySet="BASE_UserProfiles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BASE_PerfilesPorRecurso_BASE_Recursos" Association="BASEModel.FK_BASE_PerfilesPorRecurso_BASE_Recursos">
+            <End Role="BASE_Resources" EntitySet="BASE_Resources" />
+            <End Role="BASE_ProfilesResources" EntitySet="BASE_ProfilesResources" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BASE_UnidadesDeMedida_BASE_UnidadesDeMedida" Association="BASEModel.FK_BASE_UnidadesDeMedida_BASE_UnidadesDeMedida">
+            <End Role="BASE_Uom" EntitySet="BASE_Uom" />
+            <End Role="BASE_Uom1" EntitySet="BASE_Uom" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BASE_UsuariosPorPerfiles_BASE_Usuarios" Association="BASEModel.FK_BASE_UsuariosPorPerfiles_BASE_Usuarios">
+            <End Role="BASE_Users" EntitySet="BASE_Users" />
+            <End Role="BASE_UserProfiles" EntitySet="BASE_UserProfiles" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="BASE_Cities">
+          <Key>
+            <PropertyRef Name="cityId" />
+          </Key>
+          <Property Name="cityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="64" Unicode="false" FixedLength="false" />
+          <Property Name="tableKeyId" Type="Int32" Nullable="false" />
+          <Property Name="provinceId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="BASE_Provinces" Relationship="BASEModel.FK_BASE_Cities_BASE_Provinces" FromRole="BASE_Cities" ToRole="BASE_Provinces" />
+          <NavigationProperty Name="BASE_PostalCodes" Relationship="BASEModel.FK_BASE_PostalCodes_BASE_Cities" FromRole="BASE_Cities" ToRole="BASE_PostalCodes" />
+        </EntityType>
+        <EntityType Name="BASE_Concepts">
+          <Key>
+            <PropertyRef Name="conceptId" />
+          </Key>
+          <Property Name="conceptId" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="64" Unicode="false" FixedLength="false" />
+          <Property Name="tableKeyId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BASE_Countries">
+          <Key>
+            <PropertyRef Name="countryId" />
+          </Key>
+          <Property Name="countryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="64" Unicode="false" FixedLength="false" />
+          <Property Name="tableKeyId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="BASE_Provinces" Relationship="BASEModel.FK_BASE_Provinces_BASE_Countries" FromRole="BASE_Countries" ToRole="BASE_Provinces" />
+        </EntityType>
+        <EntityType Name="BASE_CurrencyTypes">
+          <Key>
+            <PropertyRef Name="currencyTypeId" />
+          </Key>
+          <Property Name="currencyTypeId" Type="Int32" Nullable="false" />
+          <Property Name="fiscalCurrencyTypeId" Type="String" Nullable="false" MaxLength="64" Unicode="false" FixedLength="false" />
+          <Property Name="tableKeyId" Type="Int32" Nullable="false" />
+          <Property Name="abreviation" Type="String" MaxLength="64" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="BASE_Descriptions">
+          <Key>
+            <PropertyRef Name="descriptionId" />
+          </Key>
+          <Property Name="descriptionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="languageId" Type="Int32" Nullable="false" />
+          <Property Name="entityId" Type="Int32" Nullable="false" />
+          <Property Name="tableKeyId" Type="Int32" Nullable="false" />
+          <Property Name="descriptionText" Type="String" Nullable="false" MaxLength="512" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="BASE_Descriptions1" Relationship="BASEModel.FK_BASE_Descriptions_BASE_Descriptions1" FromRole="BASE_Descriptions" ToRole="BASE_Descriptions1" />
+          <NavigationProperty Name="BASE_Descriptions2" Relationship="BASEModel.FK_BASE_Descriptions_BASE_Descriptions1" FromRole="BASE_Descriptions1" ToRole="BASE_Descriptions" />
+          <NavigationProperty Name="BASE_Languages" Relationship="BASEModel.FK_BASE_Descriptions_BASE_Languages" FromRole="BASE_Descriptions" ToRole="BASE_Languages" />
+        </EntityType>
+        <EntityType Name="BASE_DocumentTypes">
+          <Key>
+            <PropertyRef Name="documentTypeId" />
+          </Key>
+          <Property Name="documentTypeId" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="64" Unicode="false" FixedLength="false" />
+          <Property Name="tableKeyId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BASE_Languages">
+          <Key>
+            <PropertyRef Name="languageId" />
+          </Key>
+          <Property Name="languageId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="64" Unicode="false" FixedLength="false" />
+          <Property Name="shortName" Type="String" Nullable="false" MaxLength="16" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="BASE_Descriptions" Relationship="BASEModel.FK_BASE_Descriptions_BASE_Languages" FromRole="BASE_Languages" ToRole="BASE_Descriptions" />
+        </EntityType>
+        <EntityType Name="BASE_PostalCodes">
+          <Key>
+            <PropertyRef Name="postalCodeId" />
+          </Key>
+          <Property Name="postalCodeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cpNumber" Type="String" Nullable="false" MaxLength="32" Unicode="false" FixedLength="false" />
+          <Property Name="cityId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="BASE_Cities" Relationship="BASEModel.FK_BASE_PostalCodes_BASE_Cities" FromRole="BASE_PostalCodes" ToRole="BASE_Cities" />
+        </EntityType>
+        <EntityType Name="BASE_Profiles">
+          <Key>
+            <PropertyRef Name="profileId" />
+          </Key>
+          <Property Name="profileId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="64" Unicode="false" FixedLength="false" />
+          <Property Name="tableKeyId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="BASE_ProfilesResources" Relationship="BASEModel.FK_BASE_PerfilesPorRecurso_BASE_Perfiles" FromRole="BASE_Profiles" ToRole="BASE_ProfilesResources" />
+          <NavigationProperty Name="BASE_UserProfiles" Relationship="BASEModel.FK_BASE_UsuariosPorPerfiles_BASE_Perfiles" FromRole="BASE_Profiles" ToRole="BASE_UserProfiles" />
+        </EntityType>
+        <EntityType Name="BASE_ProfilesResources">
+          <Key>
+            <PropertyRef Name="profileResourcesId" />
+          </Key>
+          <Property Name="profileResourcesId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="profileId" Type="Int32" Nullable="false" />
+          <Property Name="resourceId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="BASE_Profiles" Relationship="BASEModel.FK_BASE_PerfilesPorRecurso_BASE_Perfiles" FromRole="BASE_ProfilesResources" ToRole="BASE_Profiles" />
+          <NavigationProperty Name="BASE_Resources" Relationship="BASEModel.FK_BASE_PerfilesPorRecurso_BASE_Recursos" FromRole="BASE_ProfilesResources" ToRole="BASE_Resources" />
+        </EntityType>
+        <EntityType Name="BASE_Provinces">
+          <Key>
+            <PropertyRef Name="provinceId" />
+          </Key>
+          <Property Name="provinceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="64" Unicode="false" FixedLength="false" />
+          <Property Name="tableKeyId" Type="Int32" Nullable="false" />
+          <Property Name="countryId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="BASE_Cities" Relationship="BASEModel.FK_BASE_Cities_BASE_Provinces" FromRole="BASE_Provinces" ToRole="BASE_Cities" />
+          <NavigationProperty Name="BASE_Countries" Relationship="BASEModel.FK_BASE_Provinces_BASE_Countries" FromRole="BASE_Provinces" ToRole="BASE_Countries" />
+        </EntityType>
+        <EntityType Name="BASE_ReceiptTypes">
+          <Key>
+            <PropertyRef Name="receiptTypeId" />
+          </Key>
+          <Property Name="receiptTypeId" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="64" Unicode="false" FixedLength="false" />
+          <Property Name="tableKeyId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BASE_Resources">
+          <Key>
+            <PropertyRef Name="resourceId" />
+          </Key>
+          <Property Name="resourceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="64" Unicode="false" FixedLength="false" />
+          <Property Name="tableKeyId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="BASE_ProfilesResources" Relationship="BASEModel.FK_BASE_PerfilesPorRecurso_BASE_Recursos" FromRole="BASE_Resources" ToRole="BASE_ProfilesResources" />
+        </EntityType>
+        <EntityType Name="BASE_Taxes">
+          <Key>
+            <PropertyRef Name="taxId" />
+          </Key>
+          <Property Name="taxId" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="64" Unicode="false" FixedLength="false" />
+          <Property Name="tableKeyId" Type="Int32" Nullable="false" />
+          <Property Name="rate" Type="Decimal" Nullable="false" Precision="9" Scale="2" />
+        </EntityType>
+        <EntityType Name="BASE_Uom">
+          <Key>
+            <PropertyRef Name="uomId" />
+          </Key>
+          <Property Name="uomId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="64" Unicode="false" FixedLength="false" />
+          <Property Name="tableKeyId" Type="Int32" Nullable="false" />
+          <Property Name="shortName" Type="String" Nullable="false" MaxLength="64" Unicode="false" FixedLength="false" />
+          <Property Name="baseUnitId" Type="Int32" />
+          <Property Name="baseUnitYield" Type="Decimal" Precision="9" Scale="6" />
+          <NavigationProperty Name="BASE_Uom1" Relationship="BASEModel.FK_BASE_UnidadesDeMedida_BASE_UnidadesDeMedida" FromRole="BASE_Uom" ToRole="BASE_Uom1" />
+          <NavigationProperty Name="BASE_Uom2" Relationship="BASEModel.FK_BASE_UnidadesDeMedida_BASE_UnidadesDeMedida" FromRole="BASE_Uom1" ToRole="BASE_Uom" />
+        </EntityType>
+        <EntityType Name="BASE_UserProfiles">
+          <Key>
+            <PropertyRef Name="userProfilesId" />
+          </Key>
+          <Property Name="userProfilesId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="userId" Type="Int32" Nullable="false" />
+          <Property Name="profileId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="BASE_Profiles" Relationship="BASEModel.FK_BASE_UsuariosPorPerfiles_BASE_Perfiles" FromRole="BASE_UserProfiles" ToRole="BASE_Profiles" />
+          <NavigationProperty Name="BASE_Users" Relationship="BASEModel.FK_BASE_UsuariosPorPerfiles_BASE_Usuarios" FromRole="BASE_UserProfiles" ToRole="BASE_Users" />
+        </EntityType>
+        <EntityType Name="BASE_Users">
+          <Key>
+            <PropertyRef Name="userId" />
+          </Key>
+          <Property Name="userId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="false" FixedLength="false" />
+          <Property Name="password" Type="String" Nullable="false" MaxLength="512" Unicode="false" FixedLength="false" />
+          <Property Name="adValidation" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="BASE_UserProfiles" Relationship="BASEModel.FK_BASE_UsuariosPorPerfiles_BASE_Usuarios" FromRole="BASE_Users" ToRole="BASE_UserProfiles" />
+        </EntityType>
+        <Association Name="FK_BASE_Cities_BASE_Provinces">
+          <End Role="BASE_Provinces" Type="BASEModel.BASE_Provinces" Multiplicity="1" />
+          <End Role="BASE_Cities" Type="BASEModel.BASE_Cities" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BASE_Provinces">
+              <PropertyRef Name="provinceId" />
+            </Principal>
+            <Dependent Role="BASE_Cities">
+              <PropertyRef Name="provinceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BASE_PostalCodes_BASE_Cities">
+          <End Role="BASE_Cities" Type="BASEModel.BASE_Cities" Multiplicity="1" />
+          <End Role="BASE_PostalCodes" Type="BASEModel.BASE_PostalCodes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BASE_Cities">
+              <PropertyRef Name="cityId" />
+            </Principal>
+            <Dependent Role="BASE_PostalCodes">
+              <PropertyRef Name="cityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BASE_Provinces_BASE_Countries">
+          <End Role="BASE_Countries" Type="BASEModel.BASE_Countries" Multiplicity="1" />
+          <End Role="BASE_Provinces" Type="BASEModel.BASE_Provinces" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BASE_Countries">
+              <PropertyRef Name="countryId" />
+            </Principal>
+            <Dependent Role="BASE_Provinces">
+              <PropertyRef Name="countryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BASE_Descriptions_BASE_Descriptions1">
+          <End Role="BASE_Descriptions" Type="BASEModel.BASE_Descriptions" Multiplicity="1" />
+          <End Role="BASE_Descriptions1" Type="BASEModel.BASE_Descriptions" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="BASE_Descriptions">
+              <PropertyRef Name="descriptionId" />
+            </Principal>
+            <Dependent Role="BASE_Descriptions1">
+              <PropertyRef Name="descriptionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BASE_Descriptions_BASE_Languages">
+          <End Role="BASE_Languages" Type="BASEModel.BASE_Languages" Multiplicity="1" />
+          <End Role="BASE_Descriptions" Type="BASEModel.BASE_Descriptions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BASE_Languages">
+              <PropertyRef Name="languageId" />
+            </Principal>
+            <Dependent Role="BASE_Descriptions">
+              <PropertyRef Name="languageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BASE_PerfilesPorRecurso_BASE_Perfiles">
+          <End Role="BASE_Profiles" Type="BASEModel.BASE_Profiles" Multiplicity="1" />
+          <End Role="BASE_ProfilesResources" Type="BASEModel.BASE_ProfilesResources" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BASE_Profiles">
+              <PropertyRef Name="profileId" />
+            </Principal>
+            <Dependent Role="BASE_ProfilesResources">
+              <PropertyRef Name="profileId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BASE_UsuariosPorPerfiles_BASE_Perfiles">
+          <End Role="BASE_Profiles" Type="BASEModel.BASE_Profiles" Multiplicity="1" />
+          <End Role="BASE_UserProfiles" Type="BASEModel.BASE_UserProfiles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BASE_Profiles">
+              <PropertyRef Name="profileId" />
+            </Principal>
+            <Dependent Role="BASE_UserProfiles">
+              <PropertyRef Name="profileId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BASE_PerfilesPorRecurso_BASE_Recursos">
+          <End Role="BASE_Resources" Type="BASEModel.BASE_Resources" Multiplicity="1" />
+          <End Role="BASE_ProfilesResources" Type="BASEModel.BASE_ProfilesResources" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BASE_Resources">
+              <PropertyRef Name="resourceId" />
+            </Principal>
+            <Dependent Role="BASE_ProfilesResources">
+              <PropertyRef Name="resourceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BASE_UnidadesDeMedida_BASE_UnidadesDeMedida">
+          <End Role="BASE_Uom" Type="BASEModel.BASE_Uom" Multiplicity="0..1" />
+          <End Role="BASE_Uom1" Type="BASEModel.BASE_Uom" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BASE_Uom">
+              <PropertyRef Name="uomId" />
+            </Principal>
+            <Dependent Role="BASE_Uom1">
+              <PropertyRef Name="baseUnitId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BASE_UsuariosPorPerfiles_BASE_Usuarios">
+          <End Role="BASE_Users" Type="BASEModel.BASE_Users" Multiplicity="1" />
+          <End Role="BASE_UserProfiles" Type="BASEModel.BASE_UserProfiles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BASE_Users">
+              <PropertyRef Name="userId" />
+            </Principal>
+            <Dependent Role="BASE_UserProfiles">
+              <PropertyRef Name="userId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BASEModelStoreContainer" CdmEntityContainer="BASEEntities">
+          <EntitySetMapping Name="BASE_Cities">
+            <EntityTypeMapping TypeName="BASEModel.BASE_Cities">
+              <MappingFragment StoreEntitySet="BASE_Cities">
+                <ScalarProperty Name="cityId" ColumnName="cityId" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="tableKeyId" ColumnName="tableKeyId" />
+                <ScalarProperty Name="provinceId" ColumnName="provinceId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BASE_Concepts">
+            <EntityTypeMapping TypeName="BASEModel.BASE_Concepts">
+              <MappingFragment StoreEntitySet="BASE_Concepts">
+                <ScalarProperty Name="conceptId" ColumnName="conceptId" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="tableKeyId" ColumnName="tableKeyId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BASE_Countries">
+            <EntityTypeMapping TypeName="BASEModel.BASE_Countries">
+              <MappingFragment StoreEntitySet="BASE_Countries">
+                <ScalarProperty Name="countryId" ColumnName="countryId" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="tableKeyId" ColumnName="tableKeyId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BASE_CurrencyTypes">
+            <EntityTypeMapping TypeName="BASEModel.BASE_CurrencyTypes">
+              <MappingFragment StoreEntitySet="BASE_CurrencyTypes">
+                <ScalarProperty Name="currencyTypeId" ColumnName="currencyTypeId" />
+                <ScalarProperty Name="fiscalCurrencyTypeId" ColumnName="fiscalCurrencyTypeId" />
+                <ScalarProperty Name="tableKeyId" ColumnName="tableKeyId" />
+                <ScalarProperty Name="abreviation" ColumnName="abreviation" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BASE_Descriptions">
+            <EntityTypeMapping TypeName="BASEModel.BASE_Descriptions">
+              <MappingFragment StoreEntitySet="BASE_Descriptions">
+                <ScalarProperty Name="descriptionId" ColumnName="descriptionId" />
+                <ScalarProperty Name="languageId" ColumnName="languageId" />
+                <ScalarProperty Name="entityId" ColumnName="entityId" />
+                <ScalarProperty Name="tableKeyId" ColumnName="tableKeyId" />
+                <ScalarProperty Name="descriptionText" ColumnName="descriptionText" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BASE_DocumentTypes">
+            <EntityTypeMapping TypeName="BASEModel.BASE_DocumentTypes">
+              <MappingFragment StoreEntitySet="BASE_DocumentTypes">
+                <ScalarProperty Name="documentTypeId" ColumnName="documentTypeId" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="tableKeyId" ColumnName="tableKeyId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BASE_Languages">
+            <EntityTypeMapping TypeName="BASEModel.BASE_Languages">
+              <MappingFragment StoreEntitySet="BASE_Languages">
+                <ScalarProperty Name="languageId" ColumnName="languageId" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="shortName" ColumnName="shortName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BASE_PostalCodes">
+            <EntityTypeMapping TypeName="BASEModel.BASE_PostalCodes">
+              <MappingFragment StoreEntitySet="BASE_PostalCodes">
+                <ScalarProperty Name="postalCodeId" ColumnName="postalCodeId" />
+                <ScalarProperty Name="cpNumber" ColumnName="cpNumber" />
+                <ScalarProperty Name="cityId" ColumnName="cityId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BASE_Profiles">
+            <EntityTypeMapping TypeName="BASEModel.BASE_Profiles">
+              <MappingFragment StoreEntitySet="BASE_Profiles">
+                <ScalarProperty Name="profileId" ColumnName="profileId" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="tableKeyId" ColumnName="tableKeyId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BASE_ProfilesResources">
+            <EntityTypeMapping TypeName="BASEModel.BASE_ProfilesResources">
+              <MappingFragment StoreEntitySet="BASE_ProfilesResources">
+                <ScalarProperty Name="profileResourcesId" ColumnName="profileResourcesId" />
+                <ScalarProperty Name="profileId" ColumnName="profileId" />
+                <ScalarProperty Name="resourceId" ColumnName="resourceId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BASE_Provinces">
+            <EntityTypeMapping TypeName="BASEModel.BASE_Provinces">
+              <MappingFragment StoreEntitySet="BASE_Provinces">
+                <ScalarProperty Name="provinceId" ColumnName="provinceId" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="tableKeyId" ColumnName="tableKeyId" />
+                <ScalarProperty Name="countryId" ColumnName="countryId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BASE_ReceiptTypes">
+            <EntityTypeMapping TypeName="BASEModel.BASE_ReceiptTypes">
+              <MappingFragment StoreEntitySet="BASE_ReceiptTypes">
+                <ScalarProperty Name="receiptTypeId" ColumnName="receiptTypeId" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="tableKeyId" ColumnName="tableKeyId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BASE_Resources">
+            <EntityTypeMapping TypeName="BASEModel.BASE_Resources">
+              <MappingFragment StoreEntitySet="BASE_Resources">
+                <ScalarProperty Name="resourceId" ColumnName="resourceId" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="tableKeyId" ColumnName="tableKeyId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BASE_Taxes">
+            <EntityTypeMapping TypeName="BASEModel.BASE_Taxes">
+              <MappingFragment StoreEntitySet="BASE_Taxes">
+                <ScalarProperty Name="taxId" ColumnName="taxId" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="tableKeyId" ColumnName="tableKeyId" />
+                <ScalarProperty Name="rate" ColumnName="rate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BASE_Uom">
+            <EntityTypeMapping TypeName="BASEModel.BASE_Uom">
+              <MappingFragment StoreEntitySet="BASE_Uom">
+                <ScalarProperty Name="uomId" ColumnName="uomId" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="tableKeyId" ColumnName="tableKeyId" />
+                <ScalarProperty Name="shortName" ColumnName="shortName" />
+                <ScalarProperty Name="baseUnitId" ColumnName="baseUnitId" />
+                <ScalarProperty Name="baseUnitYield" ColumnName="baseUnitYield" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BASE_UserProfiles">
+            <EntityTypeMapping TypeName="BASEModel.BASE_UserProfiles">
+              <MappingFragment StoreEntitySet="BASE_UserProfiles">
+                <ScalarProperty Name="userProfilesId" ColumnName="userProfilesId" />
+                <ScalarProperty Name="userId" ColumnName="userId" />
+                <ScalarProperty Name="profileId" ColumnName="profileId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BASE_Users">
+            <EntityTypeMapping TypeName="BASEModel.BASE_Users">
+              <MappingFragment StoreEntitySet="BASE_Users">
+                <ScalarProperty Name="userId" ColumnName="userId" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="adValidation" ColumnName="adValidation" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

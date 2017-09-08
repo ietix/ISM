@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace ERP.Model
 {
@@ -11,14 +8,18 @@ namespace ERP.Model
 
     public string Denomination { get; set; }
 
-    public TipoDeDocumento Document { get; set; }
+    public ReceiptType Document { get; set; }
 
     public bool Isinactive { get; set; }
+
+    public string InternalNumber { get; set; }
 
     public string Observations { get; set; }
 
     public string DocumentCode { get; set; }
 
-    public List<Addresses> Addresseses { get; set; }
+    public IList<Address> Addresses { get; set; }
+
+    public IList<Contact> Contacts { get; set; }
   }
 }

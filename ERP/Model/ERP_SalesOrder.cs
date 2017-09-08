@@ -25,9 +25,9 @@ namespace ERP.Model
         public int salesOrderStateId { get; set; }
         public string observations { get; set; }
         public Nullable<int> contractId { get; set; }
-        public int clientId { get; set; }
+        public int personId { get; set; }
+        public int personTypeId { get; set; }
     
-        public virtual ERP_Clients ERP_Clients { get; set; }
         public virtual ERP_Contracts ERP_Contracts { get; set; }
         public virtual ICollection<ERP_ItemsSalesOrder> ERP_ItemsSalesOrder { get; set; }
         public virtual ERP_SalesOrderStates ERP_SalesOrderStates { get; set; }
